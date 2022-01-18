@@ -1,0 +1,50 @@
+// Div sizes
+$container-width: 90%;
+
+// Padding and margin
+$YPadding: 2rem;
+
+// Fonts size
+$fontMain: 2.25rem;
+$fontSub: 1.32rem;
+$text: 1.12rem;
+
+// Text shadow
+$textShadow: 0 0.25rem 0.25rem rgba(0, 0, 0, .18);
+
+// Font thickness
+$thin: 300;
+$normal: 400;
+$medium: 500;
+$fat: 600;
+
+// Border radius
+$mainRadius: 0.5rem;
+
+// Main border
+$border: 2px solid #FFBE2E;
+
+// Main shadow
+$shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, .25);
+
+// Transition
+$mainTransition: all 0.3s ease 0s;
+
+// Colors
+$corpBlue: linear-gradient(137.24deg, #1C3D4B 28.96%, #2E4651 51.6%, #282C33 72.01%);
+$corpBlueTransparent: linear-gradient(137.24deg, rgba(28, 61, 75, 0.72) 28.96%, rgba(46, 70, 81, 0.32) 51.6%, rgba(40, 44, 51, 0.84) 72.01%);
+$corpYellowGradient: linear-gradient(96.09deg, #FFBE2E 42.51%, #B97500 95.09%);
+$corpYellow: #FFBE2E;
+$corpYellowHover: #ffbd2ec7;
+$corpWhite: #F2F2F2;
+$subColor: #b8b8b8;
+$h1: #08415C;
+$mainText: #404040;
+$dropShadow: rgba(0, 0, 0, .4);
+
+// Media querys
+$mobileL: 424px;
+$tablet: 767px;
+$laptop: 1023px;
+$laptopL: 1439px;
+$fourK: 2559px;

@@ -1,0 +1,66 @@
+.subMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10%;
+    transition: $mainTransition;        
+
+    li {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-bottom: 0.5rem;
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            display: block;
+            padding: 1rem;
+        }
+    }
+}
+
+.dropMenu {
+    margin-top: 1rem !important;
+    background: linear-gradient(137.24deg, #1C3D4B 28.96%, #2E4651 51.6%, #282C33 72.01%);
+    border-radius: $mainRadius !important;
+    overflow: hidden !important;
+
+    &__item {
+        margin-bottom: 0rem !important;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        &:hover {
+            background: $corpYellowGradient !important;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            padding: 0.75rem 2rem !important;
+            font-size: $text;
+            color: $corpWhite !important;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $corpWhite !important;
+            }
+        }
+    }
+}
+
+.divider {
+    margin: 0 !important;
+    background: $corpWhite;
+
+    &:last-child {
+        display: none;
+    }
+}
