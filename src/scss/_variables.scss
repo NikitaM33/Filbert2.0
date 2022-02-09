@@ -6,11 +6,13 @@ $YPadding: 2rem;
 
 // Fonts size
 $fontMain: 2.25rem;
+$fontSubHead: 1.3rem;
 $fontSub: 1.32rem;
 $text: 1.12rem;
 
 // Text shadow
 $textShadow: 0 0.25rem 0.25rem rgba(0, 0, 0, .18);
+$hardShadow: 3px 3px 4px rgba(0, 0, 0, .9);
 
 // Font thickness
 $thin: 300;
@@ -20,12 +22,15 @@ $fat: 600;
 
 // Border radius
 $mainRadius: 0.5rem;
+$bigRadius: 1.18rem;
 
 // Main border
 $border: 2px solid #FFBE2E;
 
 // Main shadow
 $shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, .25);
+$hoverButtonShadow: 0 5px 7px rgba(0, 0, 0, .5);
+$activeButtonShadow: 0 3px 7px rgba(0, 0, 0, .5);
 
 // Transition
 $mainTransition: all 0.3s ease 0s;
@@ -33,14 +38,17 @@ $mainTransition: all 0.3s ease 0s;
 // Colors
 $corpBlue: linear-gradient(137.24deg, #1C3D4B 28.96%, #2E4651 51.6%, #282C33 72.01%);
 $corpBlueTransparent: linear-gradient(137.24deg, rgba(28, 61, 75, 0.72) 28.96%, rgba(46, 70, 81, 0.32) 51.6%, rgba(40, 44, 51, 0.84) 72.01%);
+$corpBlueHover: linear-gradient(137.24deg, #265164 28.96%, #3a5764 51.6%, #383e47 72.01%);
 $corpYellowGradient: linear-gradient(96.09deg, #FFBE2E 42.51%, #B97500 95.09%);
 $corpYellow: #FFBE2E;
 $corpYellowHover: #ffbd2ec7;
 $corpWhite: #F2F2F2;
 $subColor: #b8b8b8;
 $h1: #08415C;
+$h1Hover: #18536e;
 $mainText: #404040;
 $dropShadow: rgba(0, 0, 0, .4);
+$subShadow: 0px 0px 26px rgb(0, 0, 0);
 
 // Media querys
 $mobileL: 424px;

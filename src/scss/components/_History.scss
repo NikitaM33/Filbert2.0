@@ -1,0 +1,249 @@
+.history {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 19rem 8rem;
+    background-image: 
+        $corpBlueTransparent,
+        url(../../assets/history.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+    @media screen and (min-width: $mobileL) {
+        padding: 19rem 3rem;
+    }
+
+    @media screen and (min-width: $laptop) {
+        padding: 19rem 8rem;;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        right: -11%;
+        width: 100%;
+        height: 35.2rem;
+        background: $corpYellow;
+        transform: rotate(-56.05deg);
+
+        @media screen and (min-width: $mobileL) {
+            visibility: hidden;
+        }
+
+        @media screen and (min-width: $tablet) {
+            visibility: visible;
+            width: 300vh;
+            right: inherit;
+        }
+
+        @media screen and (min-width: $laptop) {
+            top: 20%;
+        }
+    }
+
+    &__helper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 55%;
+        height: 33rem;
+        padding: 0 12.8rem;
+        border: 3px solid $corpWhite;
+        border-radius: $bigRadius;
+        z-index: 1;
+        transition: opacity 1s;
+
+        @media screen and (min-width: $mobileL) {
+            padding: 20rem 10rem;
+            background: $corpYellow;
+        }
+
+        @media screen and (min-width: $tablet) {
+            background: transparent;
+        }
+
+        @media screen and (min-width: $laptop) {
+            padding: inherit;
+        }
+
+        @media screen and (min-width: $laptopL) {
+            padding: 0 12.8rem;
+        }
+
+        &_invis {
+            height: 10rem;
+            opacity: 0;
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-around;
+
+            @media screen and (min-width: $mobileL) {
+                flex-direction: column;
+            }
+
+            @media screen and (min-width: 1850px) {
+                flex-direction: row;
+                max-width: 84%;
+            }
+        }
+
+        &__corpName {
+            flex: 0 0 35%;
+
+            @media screen and (min-width: $mobileL) {
+                margin-bottom: 2rem;
+            }
+
+            span {
+                font-size: $fontMain;
+                font-weight: $medium;
+                color: $corpWhite;
+                text-shadow: $hardShadow;
+            }
+        }
+        
+        &__text {
+            flex: 0 0 58%;
+
+            p {
+                margin-bottom: 2rem;
+                font-size: $text;
+                color: $h1;
+
+                @media screen and (min-width: $mobileL) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        &__button {
+            width: 12.8rem;
+            height: 2.6rem;
+        }
+    }
+
+    .slider {
+        position: absolute;
+        max-width: 55%;
+        height: 33rem;
+        border: 3px solid $corpWhite;
+        border-radius: $bigRadius;
+        z-index: 1;
+        transition: opacity 1s;
+
+        @media screen and (min-width: $mobileL) {
+            padding: 20rem 10rem;
+            background: $corpYellow;
+        }
+
+        @media screen and (min-width: $tablet) {
+            background: transparent;
+            padding: 20rem 6rem;
+        }
+
+        @media screen and (min-width: $laptopL) {
+            padding: 0 12.8rem;
+        }
+
+        &_invis {
+            visibility: hidden;
+            height: 10rem;
+            opacity: 0;
+        }
+    }
+
+    &__narrative {
+        height: 100%;
+
+        .swiper-slide {
+            width: 1px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+
+            &::before,
+            &::after {
+                position: absolute;
+                color: $subColor;
+                transition: $mainTransition;
+            }
+
+            &:hover {
+                &::before,
+                &::after {
+                position: absolute;
+                color: $corpWhite;
+                filter: drop-shadow($hardShadow);
+            }
+            }
+        }
+
+        .swiper-pagination-bullet {
+            background: $h1;
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        @media screen and (min-width: $mobileL) {
+            flex-direction: row;
+        }
+
+        @media screen and (min-width: $laptopL) {
+            flex-direction: column;
+        }
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-around;
+
+        @media screen and (min-width: $mobileL) {
+            flex-direction: column;
+        }
+
+        @media screen and (min-width: 1850px) {
+            flex-direction: row;
+            max-width: 84%;
+        }
+
+        &__corpName {
+            flex: 0 0 35%;
+
+            span {
+                font-size: $fontMain;
+                font-weight: $medium;
+                color: $corpWhite;
+                text-shadow: $hardShadow;
+            }
+        }
+
+        &__text {
+            flex: 0 0 58%;
+            margin-top: 5rem;
+
+            p {
+                font-size: $text;
+                color: $h1;
+            }
+        }
+    }
+}

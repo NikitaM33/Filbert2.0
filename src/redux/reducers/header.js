@@ -24,8 +24,6 @@ const header = (state = initialState, action) => {
       }
 
     case SET_SUB_MENU_ACTIVE:
-      console.log(action.payload)
-
       return {
         ...state,
         eventMenu: action.payload

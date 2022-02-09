@@ -1,0 +1,32 @@
+.corButton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    background: $corpBlue;
+    font-size: $text;
+    color: $corpWhite;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: $mainTransition;
+
+    img {
+        width: 5%;
+        margin-top: 3px;
+        filter: invert(100%);
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: $hoverButtonShadow;
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: $activeButtonShadow;
+    }
+}

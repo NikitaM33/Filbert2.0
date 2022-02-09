@@ -60,6 +60,9 @@ function Header() {
       case 'Первый день?':
         dispatch(sendCounter('Первый день?'));
         break;
+
+      default:
+        return link
     }
   }
 

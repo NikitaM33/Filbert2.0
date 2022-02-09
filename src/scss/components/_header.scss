@@ -23,7 +23,6 @@
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
-        padding: 1rem $YPadding;
     }
 
     .header {
@@ -159,10 +158,10 @@
         url(../../assets/board.jpg);
     background-position: 0 center;
     background-size: cover;
-    z-index: 10;
     @include shadow;
     transition: $mainTransition;
     animation: smothOutSub .8s ease-in 0s;
+    z-index: 10;
 
     @include smoothOutSubMenu;
     

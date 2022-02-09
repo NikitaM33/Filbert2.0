@@ -5,6 +5,7 @@ module.exports = function override(config, env) {
     '@api': 'src/api',
     '@assets': 'src/assets',
     '@components': 'src/components',
+    '@common': 'src/components/common',
     '@redux': 'src/redux'
   })(config);
 

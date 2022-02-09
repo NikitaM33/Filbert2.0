@@ -1,0 +1,58 @@
+.solidYellowButton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 0;
+    font-size: $text;
+    text-shadow: $textShadow;
+    border: none;
+    border-radius: 2rem;
+    outline: none;
+    cursor: pointer;
+    transition: $mainTransition;
+    transform: translateY(-1px);
+    box-shadow: $activeButtonShadow;
+
+    img {
+        filter: invert(100%)
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: $hoverButtonShadow;
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: $activeButtonShadow;
+    }
+}
+
+.solid {
+    background: $corpYellowGradient;
+    color: $corpWhite;
+}
+
+.bordered {
+    border: 2px solid transparent;
+    background:
+        linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(96.09deg, #FFBE2E 42.51%, #B97500 95.09%) border-box;
+    border-radius: 2rem;
+    border-radius: 2rem;
+    outline: none;
+    color: $h1;
+}
+
+.disable {
+    cursor: unset;
+    transform: translateY(0px);
+    box-shadow: none;
+
+    &:hover {
+        transform: translateY(0px);
+        box-shadow: none;
+    }
+}
