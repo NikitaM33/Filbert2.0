@@ -1,0 +1,652 @@
+// Company old
+@mixin buildOldCircle () {
+    @keyframes oldCircle {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        30% {
+            transform: translate(-50%, -50%) scale(1.12);
+        }
+
+        55% {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        80% {
+            transform: translate(-50%, -50%) scale(1.12);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    @keyframes tenFlyTop {
+        0% {
+            opacity: 0;
+            transform: translateY(-800%);
+        }
+
+        10% {
+            opacity: 1;
+            transform: translateY(5%);
+        }
+
+        15% {
+            transform: translateY(0);
+        }
+
+        85% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        90%{
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(-800%);
+        }
+    }
+
+    @keyframes yearsFlyRight {
+        0% {
+            opacity: 0;
+            transform: translateX(50%);
+        }
+
+        10% {
+            opacity: 1;
+            transform: translateX(-5%);
+        }
+
+        15% {
+            transform: translateX(0);
+        }
+
+        85% {
+            opacity: 1;
+            transform: translateX(-5%);
+        }
+
+        90%{
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(500%);
+        }
+    }
+
+    @keyframes onMarketFlyLeft {
+        0% {
+            opacity: 0;
+            transform: translateY(800%);
+        }
+
+        10% {
+            opacity: 1;
+            transform: translateY(5%);
+        }
+
+        15% {
+            transform: translateY(0);
+        }
+
+        85% {
+            opacity: 1;
+            transform: translateY(5%);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(0);
+        }
+    }
+}
+
+@mixin pulse () {
+    @keyframes smoothPulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes twitchPulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        53% {
+            transform: scale(1);
+        }
+
+        55% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes verticalSmoothPulse {
+        0% {
+            transform: scale(1) rotate(-90deg);
+        }
+
+        50% {
+            transform: scale(1.1) rotate(-90deg);
+        }
+
+        100% {
+            transform: scale(1) rotate(-90deg);
+        }
+    }
+}
+
+@mixin strightMove () {
+    @keyframes horizontalShortMove {
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(10%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes verticalLongMove {
+        0% {
+            transform: translateY(0);
+        }
+
+        30% {
+            transform: translateY(130%);
+        }
+
+        32% {
+            transform: translateY(132%);
+        }
+
+        35% {
+            transform: translateY(135%);
+        }
+
+        38% {
+            transform: translateY(138%);
+        }
+
+        40% {
+            transform: translateY(140%);
+        }
+
+        42% {
+            transform: translateY(142%);
+        }
+
+        45% {
+            transform: translateY(145%);
+        }
+
+        48% {
+            transform: translateY(148%);
+        }
+
+        50% {
+            transform: translateY(150%);
+        }
+
+        52% {
+            transform: translateY(152%);
+        }
+
+        55% {
+            transform: translateY(155%);
+        }
+
+        58% {
+            transform: translateY(158%);
+        }
+
+        60% {
+            transform: translateY(160%);
+        }
+
+        62% {
+            transform: translateY(162%);
+        }
+
+        65% {
+            transform: translateY(165%);
+        }
+
+        68% {
+            transform: translateY(168%);
+        }
+
+        70% {
+            transform: translateY(170%);
+        }
+
+        72% {
+            transform: translateY(172%);
+        }
+
+        75% {
+            transform: translateY(175%);
+        }
+
+        78% {
+            transform: translateY(178%);
+        }
+
+        80% {
+            transform: translateY(180%);
+        }
+
+        100% {
+            transform: translateY(400%);
+        }
+    }
+
+    @keyframes verticalShortMove {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(10%);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes verticalMoveBack {
+        0% {
+            transform: translateY(0);
+        }
+
+        30% {
+            transform: translateY(130%);
+        }
+
+        32% {
+            transform: translateY(132%);
+        }
+
+        35% {
+            transform: translateY(135%);
+        }
+
+        38% {
+            transform: translateY(138%);
+        }
+
+        40% {
+            transform: translateY(140%);
+        }
+
+        42% {
+            transform: translateY(142%);
+        }
+
+        45% {
+            transform: translateY(145%);
+        }
+
+        48% {
+            transform: translateY(148%);
+        }
+
+        50% {
+            transform: translateY(150%);
+        }
+        
+        52% {
+            height: 15%;
+            transform: translateY(200%);
+        }
+    }
+
+    @keyframes verticalMoveBackRevert {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            height: 15%;
+            transform: translateY(-320%);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes verticalMoveRevert {
+        0% {
+            transform: translateY(99%);
+        }
+
+        30% {
+            transform: translateY(-180%);
+        }
+
+        32% {
+            transform: translateY(-182%);
+        }
+
+        35% {
+            transform: translateY(-185%);
+        }
+
+        38% {
+            transform: translateY(-188%);
+        }
+
+        40% {
+            transform: translateY(-190%);
+        }
+
+        42% {
+            transform: translateY(-192%);
+        }
+
+        45% {
+            transform: translateY(-195%);
+        }
+
+        48% {
+            transform: translateY(-198%);
+        }
+
+        50% {
+            transform: translateY(-200%);
+        }
+
+        52% {
+            transform: translateY(-202%);
+        }
+
+        55% {
+            transform: translateY(-205%);
+        }
+
+        60% {
+            transform: translateY(-210%);
+        }
+
+        62% {
+            transform: translateY(-212%);
+        }
+
+        65% {
+            transform: translateY(-215%);
+        }
+
+        68% {
+            transform: translateY(-218%);
+        }
+
+        70% {
+            transform: translateY(-220%);
+        }
+
+        72% {
+            transform: translateY(-222%);
+        }
+
+        75% {
+            transform: translateY(-225%);
+        }
+
+        78% {
+            transform: translateY(-228%);
+        }
+
+        80% {
+            transform: translateY(-230%);
+        }
+
+        100% {
+            transform: translateY(-330%);
+        }
+    }
+
+    @keyframes horizontalLongMove {
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(-70vw) scale(2);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+@mixin region () {
+    @keyframes shortCircuit {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 1;
+        }
+
+        51% {
+            opacity: 0;
+        }
+
+        52% {
+            opacity: 1;
+        }
+
+        53% {
+            opacity: 0;
+        }
+
+        54% {
+            opacity: 1;
+        }
+
+        99% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes glideAndBlink {
+        0% {
+            opacity: 0;
+            transform: translateX(-50%) scaleX(0);
+        }
+
+        5% {
+            opacity: 1;
+            transform: translateX(0) scaleX(1);
+        }
+
+        67% {
+            opacity: 1;
+        }
+
+        68% {
+            opacity: 0;
+        }
+
+        69% {
+            opacity: 1;
+        }
+
+        100% {
+            
+        }
+    }
+
+    @keyframes rotateStar {
+        0% {
+            transform: rotate(0);
+        }
+        
+        10% {
+            transform: rotate(-15deg);
+        }
+        
+        100% {
+            transform: rotate(90deg);
+        }
+    }
+
+    @keyframes moveHorizontalSquare {
+        10% {
+            top: 51.7%;
+            width: 2.5%;
+            height: 1%;
+        }
+
+        30% {
+            top: 51.7%;
+            left: 48%;
+            width: 0.5%;
+            height: 1%;
+        }
+
+        35% {
+            top: 51.7%;
+            width: 2.5%;
+            height: 1%;
+        }
+
+        60% {
+            top: 51.7%;
+            left: 25%;
+            height: 1%;
+        }
+
+        70% {
+            top: 40%;
+            left: 25%;
+            height: 12.6%;
+        }
+
+        75% {
+            top: 40%;
+            left: 25%;
+            height: 12.6%;
+        }
+
+        85% {
+            top: 51.7%;
+            left: 25%;
+            height: 1%;
+        }
+
+        100% {
+            top: 51.7%;
+            left: 25%;
+            // width: 2.5%;
+            height: 1%;
+        }
+    }
+}
+
+@mixin starShining ($visible) {
+    @keyframes starShining {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: $visible;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+@mixin employees () {
+    @keyframes swirlAround {
+        40% {
+            transform: rotate(0);
+        }
+
+        50% {
+            transform: rotate(90deg);
+        }
+
+        100% {
+            transform: rotate(90deg);
+        }
+    }
+
+    @keyframes swirlAroundAndPump {
+        40% {
+            transform: rotate(0);
+        }
+
+        50% {
+            transform: rotate(90deg);
+        }
+
+        60% {
+            transform: rotate(0);
+        }
+
+        90% {
+            transform: rotate(0) scale(1.2);
+        }
+        100% {
+            transform: rotate(0);
+        }
+    }
+
+    @keyframes aroundTriangle {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes rounded {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes goThrough {
+        100% {
+            top: 150%;
+        }
+    }
+    
+}

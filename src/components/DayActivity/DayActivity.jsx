@@ -40,7 +40,7 @@ function DayActivity() {
       // loop: true,
       autoplay: {
         delay: 7000,
-        disableOnInteraction: false
+        disableOnInteraction: true
       },
       speed: 800,
       effect: 'coverflow',
@@ -69,7 +69,7 @@ function DayActivity() {
   }, []);
 
   return (
-    <div className="dayActivity">
+    <section className="dayActivity">
       <div className="wrapper">
         <div className="dayActivity__content">
 
@@ -367,7 +367,7 @@ function DayActivity() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

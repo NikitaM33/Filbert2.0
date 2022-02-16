@@ -33,7 +33,7 @@ function History() {
   }
 
   return (
-    <div className="history">
+    <section className="history">
       <div className="history__helper"></div>
       <div className={classnames(
         'history__banner',
@@ -195,7 +195,7 @@ function History() {
           <div className="swiper-pagination"></div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

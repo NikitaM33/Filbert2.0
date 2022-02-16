@@ -1,0 +1,550 @@
+@import '../mixins/statistic';
+
+.statistic {
+    position: relative;
+    padding-bottom: 52%;
+    background: $corpBlueTransparent, url(../../assets/statistic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    overflow: hidden;
+    user-select: none;
+    
+    @include buildOldCircle;
+    @include pulse;
+    @include strightMove;
+    @include region;
+    @include employees;
+
+    .swiperAbsoluteWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }    
+
+    .yellowCircle {
+        &__transparentNumber {
+            position: absolute;
+            top: -13%;
+            left: 15%;
+            margin: 0;
+            opacity: 0.6;
+            font-family: 'Rubik';
+            font-size: 13rem;
+            font-weight: 900;
+            transition: $mainTransition;
+            animation: 5s verticalShortMove 1s infinite; 
+        }
+
+        &__borderCircle {
+            position: absolute;
+            top: 15%;
+            left: 8%;
+            width: 5%;
+            height: 10%;
+            background: transparent;
+            border: 15px solid $corpWhite;
+            border-radius: 50%;
+            transition: $mainTransition;
+            animation: 0.6s ease smoothPulse 0s infinite;
+        }
+
+        &__borderCircle:nth-child(1) {
+            top: 80%;
+            left: 72%;
+            width: 15%;
+            height: 30%;
+            opacity: .3;
+            animation: 3s ease smoothPulse 0s infinite;
+        }
+
+        &__borderCircle:nth-child(2) {
+            top: 5%;
+            left: 90%;
+            background: $corpWhite;
+            border: none;
+            animation: 1.5s ease twitchPulse 0s infinite;
+        }
+        
+        &__borderCircle:nth-child(3) {
+            top: 70%;
+            left: 90%;
+            width: 1rem;
+            height: 1rem;
+            background: $corpWhite;
+            border: none;
+            opacity: 0.6;
+            animation: 5s ease-in-out horizontalLongMove 0s infinite;
+        }
+
+        &__borderCircle:nth-child(4) {
+            top: 26%;
+            left: 82%;
+            width: 6rem;
+            height: 6rem;
+            background: rgba(0, 0, 0, .3);
+            border: none;
+            animation: 3s ease-in-out smoothPulse 0s infinite;
+        }
+
+        &__moveHorizontalLine {
+            position: absolute;
+            top: 75%;
+            left: 18%;
+            width: 10%;
+            height: 2%;
+            background: $corpYellow;
+            transition: $mainTransition;
+            animation: 1s ease horizontalShortMove 0s infinite;
+        }
+
+        &__moveHorizontalLine:nth-child(2n) {
+            top: 77%;
+            left: 12%;
+            animation: 1.1s ease horizontalShortMove 0s infinite;
+        }
+
+        &__moveVerticalLine {
+            position: absolute;
+            top: -44%;
+            left: 74%;
+            width: 3px;
+            height: 45%;
+            background: $corpYellow;
+            transition: $mainTransition;
+            animation: 3s ease-in-out verticalLongMove 0s infinite;
+        }
+        
+        &__moveVerticalLine:nth-child(2n) {
+            top: 99%;
+            left: 75%;
+            background: $corpWhite;
+            animation: 3s ease-in-out verticalMoveRevert 0s infinite;
+        }
+
+        .circle {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            left: 50%;
+            width: 30%;
+            height: 58%;
+            transform: translate(-50%, -50%);
+            
+    
+            &::before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                background: $corpYellow;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                transition: $mainTransition;
+                animation: 5s ease oldCircle 0.6s infinite;
+            }
+    
+            h1 {
+                margin: 0 1.5rem 0 0;
+                color: $corpWhite;
+                font-family: 'Rubik';
+                font-size: 8vw;
+                font-weight: $fat;
+                text-shadow: $textShadow;
+                text-transform: uppercase;
+            }
+    
+            h3 {
+                color: $corpWhite;
+                font-size: 5vw;
+                font-weight: $fat;
+                text-shadow: $textShadow;
+                text-transform: uppercase;
+            }
+    
+            &__years {
+                display: flex;
+                margin: 0 0 0 50%;
+                opacity: 1;
+            }
+    
+            &__number {
+                opacity: 0;
+                transition: $mainTransition;
+                animation: 5s ease tenFlyTop 1s infinite;
+            }
+    
+            &__numberText {
+                opacity: 0;
+                transition: $mainTransition;
+                animation: 5s ease yearsFlyRight 1s infinite;
+            }
+    
+            &__text {
+                opacity: 0;
+                margin: 0 0 0 -50%;
+                transition: $mainTransition;
+                animation: 5s ease onMarketFlyLeft 0.5s infinite;
+            }
+        }
+    }
+
+    .regions {
+        &__regionMoveVerticalLine {
+            position: absolute;
+            top: -44%;
+            left: 14%;
+            width: 3px;
+            height: 45%;
+            background: $corpYellow;
+            transition: $mainTransition;
+            animation: 3s ease-in-out verticalMoveBack 0s infinite;
+        }
+
+        &__starBlock {
+            img {
+                position: absolute;
+                top: 34%;
+                left: 23%;
+                height: 5%; 
+                width: 5%;
+                opacity: $O4;
+                @include starShining($O4);
+                animation: starShining 2s 0s infinite;
+
+                &:nth-child(2) {
+                    left: 18%;
+                    @include starShining($O4);
+                    // opacity: $O4;
+                    animation: starShining 2s 0.5s infinite;
+                }
+
+                &:nth-child(3) {
+                    left: 13%;
+                    // opacity: $O2;
+                    @include starShining($O4);
+                    animation: starShining 2s 1s infinite;
+                }
+
+                &:nth-child(4) {
+                    top: 43%;
+                    left: 18%;
+                    // opacity: $O4;
+                    @include starShining($O4);
+                    animation: starShining 2s 1.5s infinite;
+                }
+
+                &:nth-child(5) {
+                    top: 43%;
+                    left: 13%;
+                    // opacity: $O2;
+                    @include starShining($O4);
+                    animation: starShining 2s 2s infinite;
+                }
+
+                &:nth-child(6) {
+                    top: 52%;
+                    left: 18%;
+                    // opacity: $O3;
+                    @include starShining($O4);
+                    animation: starShining 2s 2.5s infinite;
+                }
+
+                &:nth-child(7) {
+                    top: 52%;
+                    left: 13%;
+                    // opacity: $O2;
+                     @include starShining($O4);
+                     animation: starShining 2s 3s infinite;
+                }
+
+                &:nth-child(8) {
+                    top: 61%;
+                    left: 13%;
+                    // opacity: $O2;
+                     @include starShining($O4);
+                     animation: starShining 2s 3.5s infinite;
+                }
+            }
+        }
+
+        &__ghostStar {
+            img {
+                &:nth-child(1) {
+                    position: absolute;
+                    top: 70%;
+                    left: 58%;
+                    opacity: 0.4;
+                    filter: invert(1);
+                    animation: 2s ease-in-out rotateStar 0s infinite;
+                }
+                
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 10%;
+                    left: 80%;
+                    width: 20%;
+                    height: 20%;
+                    opacity: 0.4;
+                    transform: rotate();
+                    animation: 1s ease smoothPulse 0s infinite;
+                } 
+            }
+        }
+
+        &__squareOne {
+            position: absolute;
+            top: 51.7%;
+            left: 25%;
+            width: 2.5%;
+            height: 1%;
+            background: $corpYellow;
+            animation: moveHorizontalSquare ease 5s 0s infinite;
+        }
+        
+        &__regionMoveVerticalLine:nth-child(2n) {
+            top: 98%;
+            left: 84%;
+            background: $corpYellow;
+            animation: 3s ease-in-out verticalMoveBackRevert 0s infinite;
+        }
+        
+        &__regionMoveVerticalLine:nth-child(3n) {
+            top: -44%;
+            left: 85%;
+            background: $corpWhite;
+            animation: 3s ease-in-out verticalLongMove 0s infinite;
+        }
+
+        &__yellowBlock {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &__yellowBar {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            padding: 0.5rem 3rem;
+            
+            
+            &::before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: $corpYellow;
+                opacity: 1;
+                animation: 5s glideAndBlink 6s infinite;
+                z-index: -1;
+            }
+
+            h1,
+            span {
+                margin: 0;
+                color: $corpWhite;
+                font-family: 'Rubik';
+                font-size: 5vw;
+                font-weight: $fat;
+                text-shadow: $textShadow;
+            }
+
+            span {
+                animation: 3s shortCircuit 6.5s infinite;
+            }
+
+            span:nth-child(1) {
+                animation: 2s shortCircuit 6.6s infinite;
+            }
+        }
+
+        &__text {
+            margin-left: 9rem;
+
+            h3 {
+                margin: 0;
+                color: $corpYellow;
+                font-size: 3vw;
+                font-weight: $medium;
+                text-transform: uppercase;
+                text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, .4);
+            }
+
+            p {
+                margin-left: 50%;
+                color: $corpWhite;
+                font-size: 2vw;
+                font-weight: $medium;
+                text-transform: uppercase;
+                text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, .4);
+            }
+        }
+    }
+
+    .employees {
+        &__square {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            top: 50%;
+            left: 50%;
+            padding: 6% 7% 5% 5%;
+            border-top: 2vw solid $corpYellow;
+            border-bottom: 2vw solid $corpYellow;
+            border-left: 2vw solid $corpYellow;
+            transform: translate(-50%, -50%);
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: '';
+                right: 0;
+                width: 2vw;
+                background: $corpYellow;
+            }
+
+            &::before {
+                top: -2px;
+                height: 10%;
+            }
+
+            &::after {
+                bottom: -2px;
+                height: 55%;
+            }
+
+            span {
+                font-size: 7vw;
+                color: $corpWhite;
+                font-weight: $medium;
+                line-height: 100%;
+                text-shadow: $shadow;
+            }
+
+            span:nth-child(1) {
+                font-family: 'Rubik';
+                font-size: 7vw;
+            }
+        }
+
+        &__plus {
+            position: absolute;
+            top: 14%;
+            right: 0%;
+            width: 2vw;
+            height: 26%;
+            background: $corpYellow;
+            animation: swirlAround ease 4s 0.8s infinite;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                right: 50%;
+                width: 8.3vw;
+                height: 2vw;
+                background: $corpYellow;
+                transform: translate(50%, -50%);
+            }
+        }
+
+        &__plusPlus {
+            position: absolute;
+            top: 14%;
+            right: 9%;
+            width: 1.5vw;
+            height: 12%;
+            background: $corpYellow;
+            opacity: 0.3;
+            animation: swirlAroundAndPump ease 5s 0.5s infinite;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 50%;
+                right: 50%;
+                width: 6.5vw;
+                height: 25%;
+                background: $corpYellow;
+                transform: translate(50%, -50%);
+            }
+        }
+
+        &__borderPlus {
+            position: absolute;
+            top: 38%;
+            right: 86%;
+            animation: twitchPulse ease 2s 0.5s infinite;
+
+            &:nth-child(2n) {
+                top: 78%;
+                right: 6%;
+                animation: rounded ease 5s 0s infinite;
+            }
+        }
+
+        .triangleGoseRound {
+            position: absolute;
+            top: 83%;
+            left: 9%;
+            width: 10%;
+            height: 4%;
+            animation: aroundTriangle ease 5s 0s infinite;
+
+            &__triangle {
+                width: 0;
+                height: 0;
+                border-right: 1rem solid transparent;
+                border-bottom: 1.5rem solid $corpYellow;
+                border-left: 1rem solid transparent;
+            }
+        }
+
+        &__moveVerticalLine {
+            position: absolute;
+            top: -100%;
+            left: 15%;
+            width: 0.7vw;
+            height: 71vh;
+            background: $corpYellow;
+            animation: goThrough ease 3s 2s infinite;
+
+            &:nth-child(2n) {
+                left: 80%;
+                background: $corpWhite;
+                animation: goThrough ease 4s 1s infinite;
+            }
+        }
+
+        &__ghost350 {
+            position: absolute;
+            top: 27%;
+            left: -17%;
+            font-family: 'Rubik';
+            font-size: 13vw;
+            color: $dropShadow;
+            line-height: 9rem;
+            transform: rotate(-90deg);
+            animation: verticalSmoothPulse ease 5s 0s infinite;
+        }
+
+       
+    }
+}

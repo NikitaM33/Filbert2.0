@@ -8,7 +8,7 @@ import { MainSideBox } from '@common';
 
 function Mission() {
   return (
-    <div className="wrapper">
+    <section className="wrapper">
       <div className="mission">
         <div className="mission__leads">
 
@@ -93,7 +93,7 @@ function Mission() {
           </MainSideBox>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

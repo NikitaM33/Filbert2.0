@@ -1,6 +1,13 @@
 import React from 'react';
 
-import { DayActivity, Mission, History, OfficeMap } from '../';
+import {
+  DayActivity,
+  Mission,
+  History,
+  OfficeMap,
+  Statistic,
+  Etiquette
+} from '../';
 
 function Main() {
   return (
@@ -9,6 +16,8 @@ function Main() {
       <Mission />
       <History />
       <OfficeMap />
+      <Statistic />
+      <Etiquette />
     </>
   )
 }

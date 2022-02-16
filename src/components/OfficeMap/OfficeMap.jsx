@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import cn from 'classnames';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { setOfficeActive, setBossData } from '@redux/actions/officeMap';
+import { setOfficeActive } from '@redux/actions/officeMap';
 import { YellowButton } from '@common';
 import sixFloor from '@assets/officeMap/6_floor_map.jpg';
 import fourFloor from '@assets/officeMap/4_floor_map.jpg';
@@ -43,11 +43,6 @@ const OfficeMap = React.memo(
       }
     }
 
-    // Get boss info
-    // const getBossInfo = (bossIndex) => {
-    //   dispatch(setBossData(bossIndex));
-    // }
-
     // Mous coordinates handle by block
     const handleClickBossCard = (e) => {
       if (e.target.closest('.officeNavigate')) {
@@ -78,11 +73,11 @@ const OfficeMap = React.memo(
     }
 
     return (
-      <div className="map" onClick={handleOfficeLight}>
+      <section className="map" onClick={handleOfficeLight}>
         <div className="wrapper">
           <div className="map__header">
-            <h2>Структура компании</h2>
-            <h1>и карта расположения<br />кабинетов Filbert</h1>
+            <h2 className="h2Header">Структура компании</h2>
+            <h1 className="h1Header">и карта расположения<br />кабинетов Filbert</h1>
           </div>
 
           <StructurePopup />
@@ -138,7 +133,7 @@ const OfficeMap = React.memo(
             </div>
           </div>
         </div>
-      </div>
+      </section>
     )
   }
 );

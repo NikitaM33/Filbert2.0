@@ -4,3 +4,5 @@ export { default as DayActivity } from './DayActivity/DayActivity';
 export { default as Mission } from './Mission/Mission';
 export { default as History } from './History/History';
 export { default as OfficeMap } from './OfficeMap/OfficeMap';
+export { default as Statistic } from './Statistic/Statistic';
+export { default as Etiquette } from './Etiquette/Etiquette';

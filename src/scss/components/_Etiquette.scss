@@ -1,0 +1,180 @@
+.etiquette {
+    padding: 4rem 0;
+    
+    &__header {
+        max-width: 50%;
+        margin-bottom: 3.5rem;
+    }
+}
+
+.spots {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 660px) {
+        flex-direction: column;
+    }
+
+    &__spot {
+        position: relative;
+        width: 32%;
+        margin: 1rem 0;
+        padding: 3% 2.3rem 4% 2rem;
+        background-image: $corpBlueTransparent, url(../../assets/board.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // background-blend-mode: color;
+        border-radius: $mainRadius;
+        // border-bottom: 5px solid $corpYellow;
+        box-shadow: $allOverShadow;
+        transition: $mainTransition;
+        overflow: hidden;
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: $corpYellowGradient;
+            box-shadow: 0 -3px 12px $corpYellow;
+        }
+
+        @media screen and (max-width: 1304px) {
+            padding: 3% 1rem 4% 1rem;
+        }
+        
+        @media screen and (max-width: 660px) {
+            min-width: 66%;
+        }
+    }
+
+    &__spot:hover &__number,
+    &__spot:hover &__icon {
+        color: $corpYellow;
+        opacity: 1;
+
+        @media screen and (max-width: $laptop) {
+            opacity: 0;
+        }
+    }
+
+    &__spot:hover &__name {
+        h2 {
+            font-size: $fontSub;
+        }
+    }
+
+    &__spot:hover &__requirements {
+        height: 100%;
+        opacity: 1;
+    }
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: $laptop) {
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 27vh;
+        transition: ease-out 0.5s 0s;
+
+        @media screen and (max-width: $laptop) {
+            height: 12vh;
+        }
+
+        @media screen and (max-width: 660px) {
+            justify-content: unset;
+        }
+
+        h2 {
+            margin: 0;
+            font-weight: $medium;
+            font-size: $fontMain;
+            line-height: 3.5rem;
+            color: $corpYellow;
+            text-transform: uppercase;
+            text-shadow: $textShadow;
+            transition: ease-out 0.5s 0s;
+
+            @media screen and (max-width: 1304px) {
+                font-size: 3vw;
+            }
+
+            @media screen and (max-width: 660px) {
+                font-size: 5vw;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @media screen and (max-width: $laptop) {
+            flex-direction: row;
+        }
+    }
+
+    &__icon {
+        font-size: 4rem;
+        color: $corpYellow;
+        opacity: $O4;
+        transition: $mainTransition;
+    }
+
+    &__number {
+        font-family: 'Rubik';
+        font-size: $fontMain;
+        color: $subColor;
+        transition: $mainTransition;
+    }
+
+    &__requirements {
+        height: 0;
+        opacity: 0;
+        transition: ease-out 0.5s 0s;
+
+        p,
+        ol li {
+            margin: 0;
+            font-size: $text;
+            color: $corpWhite;
+
+            @media screen and (max-width: 1304px) {
+                font-size: 2vh;
+            }
+
+            @media screen and (max-width: 1140px) {
+                font-size: 1.8vh;
+            }
+
+            @media screen and (max-width: 930px) {
+                font-size: 1.6vh;
+            }
+
+            
+            @media screen and (max-width: 790px) {
+                font-size: 1.3vh;
+            }
+
+            @media screen and (max-width: 660px) {
+                font-size: 1.6vh;
+            }
+        }
+    }
+}
