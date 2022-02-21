@@ -1,0 +1,99 @@
+@import '../mixins/delivery';
+
+.deliver {
+    position: relative;
+    padding: 4rem 3rem 4.6rem 0;
+    background-image: $corpBlueTransparent, url(../../assets/delivery.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include busAnimation;
+
+    &__container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__bus {
+        position: absolute;
+        top: 50%;
+        left: -6%;
+        transform: translate(0%, -50%);
+    }
+
+    &__busCircle {
+        width: 38vw;
+        height: 38vw;
+        background: $corpYellowGradient;
+        border-radius: 50%;
+        opacity: 0;
+        transition: $mainTransition;
+
+        img {
+            margin-top: 12%;
+            transition: $mainTransition;
+            // opacity: 0;
+            transform: translateX(-10%);
+        }
+    }
+
+    .animateCircle {
+        opacity: 1;
+        animation: circlePop ease 0.8s 0s;
+    }
+
+    &__schedule {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__text {
+        margin: 0 0 -1rem 0;
+        width: 39vw;
+        padding: 2.7rem 2rem;
+        background: $corpYellow;
+        border-radius: $mainRadius;
+        box-shadow: $downShadow;
+        z-index: 1;
+
+        h1 {
+            text-align: right;
+            b {
+                color: $h1;
+            }
+        }
+
+        h2 {
+            text-align: right;
+            color: $corpWhite;
+            text-shadow: $textShadow;
+        }
+
+        p {
+            text-align: right;
+            font-size: $text;
+            color: $mainText;
+        }
+    }
+
+    &__table {
+        padding: 4rem 2rem 3.5rem 2rem;
+        background: $corpYellowTransparent;
+        border-radius: $mainRadius;
+        backdrop-filter: blur(3px);
+
+        th {
+            font-size: $fontSubHead;
+            color: $corpWhite;
+        }
+
+        td {
+            padding: 1rem 0;
+            font-family: 'Rubik';
+            font-size: $fontSub;
+            color: $corpWhite;
+        }
+    }
+}

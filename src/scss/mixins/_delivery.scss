@@ -1,0 +1,31 @@
+@mixin busAnimation () {
+    @keyframes circlePop {
+        0% {
+            width: 14vw;
+            height: 14vw;
+            transform: scale(1.1);
+        }
+
+        50% {
+            width: 38vw;
+            height: 38vw;
+            transform: scale(1.1);
+        }
+
+        100% {
+            width: 38vw;
+            height: 38vw;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes busComming {
+        50% {
+            transform: translateX(5%);
+        }
+
+        0% {
+            transform: translateX(0);
+        }
+    }
+}

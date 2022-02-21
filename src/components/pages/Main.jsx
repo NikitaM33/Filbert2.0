@@ -6,7 +6,8 @@ import {
   History,
   OfficeMap,
   Statistic,
-  Etiquette
+  Etiquette,
+  EmployeesDeliver
 } from '../';
 
 function Main() {
@@ -18,6 +19,7 @@ function Main() {
       <OfficeMap />
       <Statistic />
       <Etiquette />
+      <EmployeesDeliver />
     </>
   )
 }
