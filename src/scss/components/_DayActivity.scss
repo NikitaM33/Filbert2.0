@@ -39,6 +39,17 @@
             padding: 0 2rem 0 0;
         }
 
+        &__header {
+            h1,
+            h2 {
+                text-align: center;
+
+                @media screen and (min-width: $tablet) {
+                    text-align: unset;
+                }
+            }
+        }
+
 
         &__personCard {
             position: relative;
@@ -161,7 +172,11 @@
 
         &__header {
             h2 {
-                text-align: right;
+                text-align: center;
+
+                @media screen and (min-width: $tablet) {
+                    text-align: right;
+                }
             }
         }
 

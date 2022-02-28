@@ -1,21 +1,26 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { Header, Main } from './components';
+import {
+  Header,
+  Main,
+  News,
+  Footer
+} from './components';
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <Header />
-      </header>
-      <main>
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Header />}>
+            <Route index element={<Main />} />
+            <Route path="news" element={<News />} />
+            {/* <Route path="*" element={<NotFound />} /> */}
+          </Route>
         </Routes>
-      </main>
+
       <footer>
-        Footer
+        <Footer />
       </footer>
     </div>
   );

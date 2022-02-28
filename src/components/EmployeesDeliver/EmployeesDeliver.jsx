@@ -2,49 +2,22 @@ import React, { useEffect, useState, useRef } from 'react';
 import cn from 'classnames';
 
 import bus from '../../assets/bus.png';
+import { AnimationPosition } from '../../helpers/AnimationPosition';
 
-function EmployeesDeliver () {
+const EmployeesDeliver = () => {
   const [ isAnimate, setIsAnimate ] = useState(false);
   const busCircleRef = useRef();
 
-  const animOnScroll = () => {
-    const windowHeight = window.scrollY; // scrollY Текущая прокрутка страницы
-    const animateHeight = busCircleRef.current.offsetHeight; // offsetHeight Высота документа с прокручиваемой частью
-    const animOffset = offset(busCircleRef.current).top;
-    const animStart = 2;
-
-    let animatePoint = window.innerHeight - animateHeight / animStart; // innerHeight высота окна вместе с полосой прокрутки
-
-
-    if (animateHeight > window.innerHeight) {
-      animatePoint = window.innerHeight - window.innerHeight / animStart
-    }
-
-    if ((windowHeight > animOffset - animatePoint) && windowHeight < (animOffset + animateHeight)) {
-      setIsAnimate(true);
-    }
-     else {
-      setIsAnimate(false);
-     }
-  }
-
-  const offset = (el) => {
-    const rect = el.getBoundingClientRect(), // getBoundingClientRect координаты относительно окна
-      scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-    return {
-      top: rect.top + scrollTop
-    }
-  }
-
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      setTimeout(() => {animOnScroll()}, 1000)
+      setTimeout(() => {
+        AnimationPosition(busCircleRef, 4, setIsAnimate);
+      }, 1000)
     })
   }, []);
 
   return (
-    <div className="deliver">
+    <section className="deliver">
       <div className="wrapper">
         <div className="deliver__container">
           <div className="deliver__bus">
@@ -66,10 +39,10 @@ function EmployeesDeliver () {
               <h1 className="h1Header"><b>Для</b> всех <b>сотрудников</b> Filbert
                 <b> развозка</b> бесплатная
               </h1>
-              <p>
+              <p className="pHeader">
                 Утренняя развозка от ст. м. "Кировский завод". Автобус ожидает на остановке общественного транспорта на пр. Стачек со стороны ДК им Газа.
               </p>
-              <p>
+              <p className="pHeader">
                 Вечером Автобус ожидает на против главного входа в БЦ Терминал
               </p>
             </div>
@@ -104,7 +77,7 @@ function EmployeesDeliver () {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

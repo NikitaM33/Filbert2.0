@@ -27,16 +27,33 @@ h1 {
     }
 }
 
+.h1Header {
+    font-weight: $normal;
+    color: $h1;
+    line-height: 3.3rem;
+}
+
 .h2Header {
     margin-bottom: 0.5rem;
     font-weight: $normal;
     color: $corpYellow;
 }
 
-.h1Header {
+.h2HeaderWhite {
+    margin-bottom: 0.5rem;
     font-weight: $normal;
-    color: $h1;
-    line-height: 3.3rem;
+    color: $corpWhite;
+    text-shadow: $hardShadow;
+}
+
+.pHeader {
+    font-size: $text;
+    color: $mainText; 
+}
+
+.pHeaderSub {
+    font-size: $text;
+    color: $subColor;
 }
 
 // .container {

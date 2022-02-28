@@ -14,7 +14,6 @@ const Etiquette = () => {
           <h1 className="h1Header">В агентстве Filbert принят официально-деловой стиль общения</h1>
         </div>
 
-        {/* TO DO: сделать через map */}
         <div className="etiquette__spots spots">
           {
             requirements && requirements.map((requirement) => {

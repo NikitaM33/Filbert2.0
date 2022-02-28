@@ -4,9 +4,18 @@ const initialState = {
   menuIndex: null,
   subMenuIndex: null,
   mainMenu: [
-    'Инфоцентр',
-    'Мероприятия',
-    'Первый день?'
+    {
+      name: 'Новости',
+      link: 'news'
+    },
+    {
+      name: 'Мероприятия',
+      link: 'corpLive'
+    },
+    {
+      name: 'Первый день?',
+      link: 'firstDay'
+    }
   ],
   eventMenu: [
     'Фото',

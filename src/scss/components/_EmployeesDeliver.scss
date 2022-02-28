@@ -2,27 +2,45 @@
 
 .deliver {
     position: relative;
-    padding: 4rem 3rem 4.6rem 0;
+    padding: 4rem 0 4.6rem 0;
     background-image: $corpBlueTransparent, url(../../assets/delivery.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
     @include busAnimation;
+
+    @media screen and (min-Width: $laptop) {
+        padding: 4rem 3rem 4.6rem 0;
+    }
+
+    @media screen and (min-Width: $laptopL) {
+        padding: 4rem 0 4.6rem 0;
+    }
 
     &__container {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+
+        @media screen and (min-Width: $laptop) {
+            justify-content: flex-end;
+        }
     }
 
     &__bus {
-        position: absolute;
-        top: 50%;
-        left: -6%;
-        transform: translate(0%, -50%);
+        display: none;
+
+        @media screen and (min-Width: $laptop) {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -6%;
+            transform: translate(0%, -50%);
+        }
     }
 
     &__busCircle {
+        max-width: 42rem;
+        max-height: 42rem;
         width: 38vw;
         height: 38vw;
         background: $corpYellowGradient;
@@ -31,50 +49,69 @@
         transition: $mainTransition;
 
         img {
-            margin-top: 12%;
+            position: absolute;
+            top: 0;
+            left: -85%;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
             transition: $mainTransition;
-            // opacity: 0;
-            transform: translateX(-10%);
+            opacity: 0;
         }
     }
 
     .animateCircle {
         opacity: 1;
         animation: circlePop ease 0.8s 0s;
+
+        img {
+            left: -10%;
+            opacity: 1;
+        }
     }
 
     &__schedule {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        max-width: 49rem;
     }
 
     &__text {
         margin: 0 0 -1rem 0;
-        width: 39vw;
         padding: 2.7rem 2rem;
         background: $corpYellow;
         border-radius: $mainRadius;
         box-shadow: $downShadow;
         z-index: 1;
 
+        h1,
+        h2,
+        p {
+            text-align: center;
+        }
+
         h1 {
-            text-align: right;
             b {
                 color: $h1;
             }
         }
 
         h2 {
-            text-align: right;
             color: $corpWhite;
             text-shadow: $textShadow;
         }
 
-        p {
-            text-align: right;
-            font-size: $text;
-            color: $mainText;
+        @media screen and (min-Width: $laptop) {
+            max-width: 49rem;
+            width: 50vw;
+
+            h1,
+            h2,
+            p {
+                text-align: right;
+            }
         }
     }
 

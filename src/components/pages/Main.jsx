@@ -7,10 +7,11 @@ import {
   OfficeMap,
   Statistic,
   Etiquette,
-  EmployeesDeliver
+  EmployeesDeliver,
+  FoodCort
 } from '../';
 
-function Main() {
+const Main = () => {
   return (
     <>
       <DayActivity />
@@ -20,6 +21,7 @@ function Main() {
       <Statistic />
       <Etiquette />
       <EmployeesDeliver />
+      <FoodCort />
     </>
   )
 }

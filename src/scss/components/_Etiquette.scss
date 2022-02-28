@@ -2,8 +2,27 @@
     padding: 4rem 0;
     
     &__header {
-        max-width: 50%;
         margin-bottom: 3.5rem;
+
+        h1,
+        h2,
+        p {
+            text-align: center;
+        }
+
+        @media screen and (min-width: $tablet) {
+            max-width: 80%;
+
+            h1,
+            h2,
+            p {
+                text-align: unset;
+            }
+        }
+
+        @media screen and (min-width: $laptop) {
+            max-width: 50%;
+        }
     }
 }
 

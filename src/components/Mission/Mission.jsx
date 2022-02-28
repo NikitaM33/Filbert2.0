@@ -1,19 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import cn from 'classnames';
 
 import handshake from '../../assets/icons/handshake-solid.svg';
 import lock from '../../assets/icons/lock-solid.svg';
 import efficiency from '../../assets/icons/thumbs-up-solid.svg';
 import balance from '../../assets/icons/balance-scale-solid.svg';
 import { MainSideBox } from '@common';
+import { AnimationPosition } from '../../helpers/AnimationPosition';
 
-function Mission() {
+const Mission = () => {
+  const [ isAnimate, setIsAnimate ] = useState(false);
+  const elemRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setTimeout(() => {
+        AnimationPosition(elemRef, 4, setIsAnimate);
+      }, 0)
+    });
+  }, []);
+
   return (
     <section className="wrapper">
       <div className="mission">
         <div className="mission__leads">
 
           <div className="mission__item">
-            <div className="mission__elem">
+            <div ref={elemRef} className={cn(
+              'mission__elem',
+              {
+                'showPrioritets': isAnimate
+              }
+            )}>
               <div className="mission__img">
                 <img src={handshake} alt="Handshake" />
               </div>
@@ -24,7 +42,12 @@ function Mission() {
               </p>
             </div>
 
-            <div className="mission__elem">
+            <div ref={elemRef} className={cn(
+              'mission__elem',
+              {
+                'showPrioritets': isAnimate
+              }
+            )}>
               <div className="mission__img">
                 <img src={lock} alt="Lock" />
               </div>
@@ -37,7 +60,12 @@ function Mission() {
           </div>
 
           <div className="mission__item">
-            <div className="mission__elem">
+            <div ref={elemRef} className={cn(
+              'mission__elem',
+              {
+                'showPrioritets': isAnimate
+              }
+            )}>
               <div className="mission__img">
                 <img src={efficiency} alt="Efficiency" />
               </div>
@@ -48,7 +76,12 @@ function Mission() {
               </p>
             </div>
 
-            <div className="mission__elem">
+            <div ref={elemRef} className={cn(
+              'mission__elem',
+              {
+                'showPrioritets': isAnimate
+              }
+            )}>
               <div className="mission__img">
                 <img src={balance} alt="Balance" />
               </div>

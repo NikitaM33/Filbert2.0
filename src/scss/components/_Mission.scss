@@ -50,10 +50,18 @@
         align-items: center;
         justify-content: center;
         width: 15.4rem;
+        margin: 3rem 0 0 0;
+        opacity: 0;
+        transition: $mainTransition;
         
         &:last-child {
             margin-bottom: 0;
         }
+    }
+
+    .showPrioritets {
+        margin: 0;
+        opacity: 1;
     }
 
     &__img {
@@ -85,6 +93,11 @@
                 white-space: nowrap;
                 color: $corpWhite;
                 margin: 0;
+                text-align: center;
+
+                @media screen and (min-width: $tablet) {
+                    text-align: unset;
+                }
             }
         }
 

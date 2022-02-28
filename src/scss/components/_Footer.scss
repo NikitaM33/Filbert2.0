@@ -1,0 +1,39 @@
+.footer {
+    padding: 4.6rem 0;
+    background-image: $corpBlueTransparent, url(../../assets/board.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__links {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 20rem;
+            padding: 1rem 0.5rem;
+        }
+
+        a {
+            font-size: $fontMain;
+            color: $corpYellow;
+            filter: drop-shadow($hardShadow);
+
+            &:hover {
+                color: $corpYellowHover;
+            }
+        }
+    }
+
+    &__rights {
+        p {
+            font-size: $text;
+            color: $corpWhite;
+        }
+    }
+}
