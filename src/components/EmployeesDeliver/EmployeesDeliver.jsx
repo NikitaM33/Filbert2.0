@@ -14,6 +14,12 @@ const EmployeesDeliver = () => {
         AnimationPosition(busCircleRef, 4, setIsAnimate);
       }, 1000)
     })
+
+    return window.removeEventListener('scroll', () => {
+      setTimeout(() => {
+        AnimationPosition(busCircleRef, 4, setIsAnimate);
+      }, 1000)
+    })
   }, []);
 
   return (

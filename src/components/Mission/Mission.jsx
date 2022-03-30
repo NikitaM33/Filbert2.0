@@ -9,16 +9,18 @@ import { MainSideBox } from '@common';
 import { AnimationPosition } from '../../helpers/AnimationPosition';
 
 const Mission = () => {
-  const [ isAnimate, setIsAnimate ] = useState(false);
+  const [isAnimate, setIsAnimate] = useState(false);
   const elemRef = useRef();
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      setTimeout(() => {
-        AnimationPosition(elemRef, 4, setIsAnimate);
-      }, 0)
+      AnimationPosition(elemRef, 4, setIsAnimate);
     });
-  }, []);
+
+    return window.removeEventListener('scroll', () => {
+      AnimationPosition(elemRef, 4, setIsAnimate);
+    });
+  }, [])
 
   return (
     <section className="wrapper">

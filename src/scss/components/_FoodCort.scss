@@ -86,11 +86,10 @@
         }
 
         @media screen and(min-width: $laptop) {
-            flex: 0 0 20%;
             width: 33%;
             
             &:hover {
-                flex: 1 1 30%;
+                flex: 0 1 20%;
             }
         }
     }

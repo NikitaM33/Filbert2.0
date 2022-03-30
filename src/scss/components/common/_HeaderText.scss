@@ -1,0 +1,8 @@
+.headerText {
+    &__text {
+        
+        @media screen and(max-width: $laptop) {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.newspaper {
+    
+    &__inside {
+        display: flex;
+        flex-direction: column;
+        padding: 2.25rem 0;
+
+        @media screen and (min-width: $laptop) {
+            padding: 3.25rem 2rem 0 2rem;
+        }
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__worldNews,
+    &__collectionNews {
+        display: flex;
+        justify-content: space-between;
+        padding: 2.25rem 0;
+
+        @media screen and (min-width: $laptop) {
+            padding: 3.25rem 2rem 0 2rem;
+        }
+    }
+
+    &__worldNews {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__collectionNews {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__worldNewsItem {
+        width: 100%;
+    }
+
+    &__collectionNewsItem {
+        width: 100%;
+    }
+}
+

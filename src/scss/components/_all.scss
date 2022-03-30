@@ -1,16 +1,35 @@
+//Header
 @import 'header';
+
+// Main page
 @import 'subMenu';
 @import 'DayActivity';
 @import 'Mission';
 @import 'MainSideBox';
 @import 'History';
 @import 'OfficeMap';
-@import 'common/BluButton';
-@import 'common/YellowButton';
-@import 'common/StructurePopup';
 @import 'BossCard';
 @import 'Statistic';
 @import 'Etiquette';
 @import 'EmployeesDeliver';
 @import 'FoodCort';
+
+// News page
+@import 'News';
+@import 'Rating';
+@import 'NewsHeader';
+@import 'NewsPapers';
+@import 'Pagination';
+@import 'Paginator';
+
+// Footer
 @import 'Footer';
+
+// Common
+@import 'common/BluButton';
+@import 'common/YellowButton';
+@import 'common/StructurePopup';
+@import 'common/HeaderText';
+@import 'common/BlockHeader';
+@import 'common/NewsCell';
+@import 'common/NewsModal';

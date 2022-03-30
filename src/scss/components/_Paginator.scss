@@ -1,0 +1,103 @@
+.pagin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__pagination {
+        display: flex;
+        padding: 0 0 0 0;
+    }
+
+    &__next,
+    &__prev {
+        cursor: pointer;
+        filter: drop-shadow($shadow);
+        
+        img {
+            transition: $mainTransition;
+        }
+    }
+
+    &__prev {
+        transform: rotate(180deg);
+    }
+
+    &__nextDisabled {
+        opacity: 0.5;
+        cursor: auto;
+    }
+
+    &__control {
+        display: flex;
+        justify-content: center;
+        margin: 0 4rem;
+    }
+}
+
+.newsItem {
+    display: flex;
+    flex-direction: column;
+
+    &__worldSection {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0 $YPadding 0;
+
+        @media screen and (min-width: $mobileL) {
+            flex-direction: column;
+            padding: 0;
+        }
+
+        @media screen and (min-width: $tablet) {
+            flex-direction: row;
+            padding: 0;
+        }
+    }
+
+    &__worldContainer {
+        max-width: 31%;
+
+        @media screen and (min-width: $mobileL) {
+            max-width: 100%;
+            margin: 0 0 2rem 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        @media screen and (min-width: $tablet) {
+            max-width: 32%;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    &__collectionContainer {
+        max-width: 48%;
+        
+        @media screen and (min-width: $mobileL) {
+            max-width: 100%;
+            margin: 0 0 2rem 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        @media screen and (min-width: $tablet) {
+            max-width: 48%;
+            margin: 0;
+        }
+    }
+}
+
+.controlContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $YPadding 0;
+}

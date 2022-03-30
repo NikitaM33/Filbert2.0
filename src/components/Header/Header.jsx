@@ -27,7 +27,6 @@ function Header() {
   }
 
   const closeMenu = (e) => {
-    e.preventDefault();
     setIsMenuOpen(false);
   }
 
@@ -122,7 +121,8 @@ function Header() {
                       className={menuIndex === null ? 'active' : ''}
                       onClick={() => setActiveItem(null)}
                     >
-                      <Link to="/" className="nav__link" onClick={closeMenu} data-counter='main'>Главная</Link>
+                      {/* <Link to="/" className="nav__link" onClick={closeMenu} data-counter='main'>Главная</Link> */}
+                      <Link to="/" className='nav__link' onClick={closeMenu} data-counter='main'>Главная</Link>
                     </li>
 
                     {
@@ -138,7 +138,7 @@ function Header() {
                             )}
                             onClick={() => setActiveItem(index)}
                           >
-                            {/* {
+                            {
                               item.name === 'Мероприятия' ? <Dropdown overlay={SubMenu}>
                                 <Link to={item.link} className={classnames(
                                   'ant-dropdown-link',
@@ -147,9 +147,9 @@ function Header() {
                                   {item.name} <div className="link__arrow"><img src={arrowDown} alt="sub menu" /></div>
                                 </Link>
                               </Dropdown>
-                                :  */}
+                                :
                                 <Link to={item.link} onClick={closeMenu} data-counter={item.name}>{item.name}</Link>
-                            {/* } */}
+                            }
                           </li>
                         )
                       })

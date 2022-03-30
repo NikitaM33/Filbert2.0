@@ -7,8 +7,21 @@
 
     &__container {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
+
+        @media screen and (min-width: $tablet) {
+            flex-direction: row;
+        }
+    }
+
+    &__filbert {
+        text-align: center;
+    }
+
+    &__social {
+        margin-bottom: 1.5rem;
     }
 
     &__links {

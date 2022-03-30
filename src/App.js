@@ -16,6 +16,7 @@ function App() {
             <Route index element={<Main />} />
             <Route path="news" element={<News />} />
             {/* <Route path="*" element={<NotFound />} /> */}
+            {/* <Route element={<NotFound />} /> */}
           </Route>
         </Routes>
 

@@ -1,15 +1,21 @@
 import { combineReducers } from "redux";
 
 import header from './header';
+// Main page
 import officeMap from './officeMap';
 import etiquette from './etiquette';
 import foodCort from './foodCort';
+// News page
+import newsLeaders from './newsLeaders';
+import news from './news';
 
 const rootReducer = combineReducers({
   header,
   officeMap,
   etiquette,
-  foodCort
+  foodCort,
+  newsLeaders,
+  news
 });
 
 export default rootReducer;

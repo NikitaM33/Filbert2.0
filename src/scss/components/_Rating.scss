@@ -1,0 +1,306 @@
+.rating {
+    background-image: url(../../assets/ratingSmog.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: $YPadding 0;
+
+    &__headerBlock {
+        max-width: 40rem;
+        margin: 0 0 0 auto;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width: $laptop) {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        @media screen and (min-width: $laptopL) {
+            align-items: baseline;
+        }
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 35rem;
+        padding: 4em 0 3.5rem 0;
+
+        @media screen and (min-width: $laptop) {
+            align-items: flex-start;
+            margin-top: -8rem;
+            padding: 0;
+        }
+
+        &__circlePlace {
+            position: relative;
+            max-width: 21rem;
+            max-height: 21rem;
+            width: 50vw;
+            height: 50vw;
+            background: $corpYellowGradient;
+            border-radius: 50%;
+
+            @media screen and (min-width: $laptop) {
+                width: 21vw;
+                height: 21vw;
+            }
+        }
+
+        &__leaderPhoto {
+            position: absolute;
+            top: -0.5rem;
+            max-width: 10rem;
+            max-height: 10rem;
+            width: 20vw;
+            height: 20vw;
+            border-radius: 50%;
+            box-shadow: $activeButtonShadow;
+            overflow: hidden;
+
+            @media screen and (min-width: $laptop) {
+                width: 10vw;
+                height: 10vw;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        &__place,
+        &__number {
+            color: $corpWhite;
+            text-shadow: $textShadow;
+        }
+
+        &__place {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 2%;
+            right: 18%;
+            font-size: 2rem;
+            
+            @media screen and (min-width: $laptop) {
+                top: 2vw;
+            }
+        }
+
+        &__number {
+            margin: 0 0 -1.5rem 0;
+            font-family: 'Rubik';
+            font-size: 9vw;
+
+            @media screen and (min-width: $tablet) {
+                font-size: 7vw;
+            }
+
+            @media screen and (min-width: $laptop) {
+                font-size: 4vw;
+            }
+
+            @media screen and (min-width: $laptopL) {
+                font-size: 2em;
+            }
+        }
+
+        &__leaderInfo {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 50%;
+            left: 50%;
+            width: 95%;
+            padding: 1rem 0.5rem;
+            background: $dropShadow;
+            backdrop-filter: blur(3px);
+            border: $whiteBorder;
+            border-radius: $mainRadius;
+            box-shadow: $shadow;
+            transform: translate(-50%, 0);
+        }
+
+        &__leaderName,
+        &__leaderGroup,
+        &__leaderCity,
+        &__leaderFee {
+            color: $corpWhite;
+            text-shadow: $textShadow;
+        }
+
+        &__leaderName {
+            font-size: $fontSubHead;
+            text-align: center;
+        }
+
+        &__leaderGroup {
+            margin-bottom: 0.5rem;
+            font-weight: $thin;
+        }
+
+        &__leaderFee {
+            font-family: 'Rubik';
+            font-size: $fontSub;
+        }
+    }
+
+    .first {
+        margin: 0 0 4em 0;
+
+        @media screen and (min-width: $laptop) {
+            margin: 0 0 2em 3vw;
+        }
+    }
+
+    .second {
+        margin: 0 0 4em 0;
+
+        @media screen and (min-width: $laptop) {
+            margin: -3vw 0 2em 24vw;
+        }
+
+        @media screen and (min-width: $laptopL) {
+            margin: 0 0 2em 17vw;
+        }
+
+        @media screen and (min-width: 2000px) {
+            margin: 0 0 2em 14vw;
+        }
+        
+        @media screen and (min-width: $fourK) {
+            margin: 0 0 2em 12vw;
+        }
+        
+    }
+
+    .third {
+        margin: 0;
+
+        @media screen and (min-width: $laptop) {
+            margin: -5vw 0 2em 0;
+        }
+    }
+
+
+    .overallRating {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 30rem;
+        max-height: 34rem;
+        margin: 2em 0 0 0;
+        padding: 2rem 1rem 0 1rem;
+        background: $corpYellowTransparent;
+        border-radius: $mainRadius;
+        scrollbar-color: $mainText $h1;
+        scrollbar-width: thin;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 7px;
+            background-color: linear-gradient(137.24deg, rgba(28, 61, 75, 0.72) 28.96%, rgba(46, 70, 81, 0.32) 51.6%, rgba(40, 44, 51, 0.84) 62.01%);
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background-color: $scrollBar;
+            border-radius: 9em;
+        }
+    
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: $corpYellow;
+        }
+
+        @media screen and (min-width: $tablet) {
+            padding: 2rem 2rem 0 2rem;
+        }
+
+        &__behindPersons {
+            display: flex;
+            margin: 0 0 2rem 0;
+            max-width: 100%;
+        }
+
+        &__photo {
+            margin: 0 1.25rem 0 0;
+            width: 5rem;
+            height: 5rem;
+            border: 3px solid $corpYellow;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    .info {
+        width: 16.25rem;
+
+        &__personInfo h3,
+        &__cityGroup,
+        &__feesRating span {
+            color: $corpWhite;
+        }
+
+        &__personInfo {
+            display: flex;
+        }
+
+        &__place {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &__placeNumber {
+            font-family: 'Rubik';
+            font-size: $fontSub;
+            color: $subColor;
+        }
+
+        &__name {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                margin: 0;
+                line-height: 1rem;
+            }
+        }
+
+        &__cityGroup {
+            font-weight: $thin;
+        }
+
+        &__feesCount {
+            margin: 0.5em 0 0 0;
+            font-family: 'Rubik';
+            font-size: $text;
+            color: $corpWhite;
+        }
+
+        &__feesValue {
+            height: 0.4em;
+            background: $corpYellowGradient;
+            border-radius: $mainRadius;
+        }
+    }
+}

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="wrapper">
         <div className="footer__container">
           <div className="footer__social">
-            <h2 className="h2HeaderWhite">ООО &laquo;Филберт&raquo;</h2>
+            <h2 className="h2HeaderWhite footer__filbert">ООО &laquo;Филберт&raquo;</h2>
             <div className="footer__links">
               <ul>
                 <li>

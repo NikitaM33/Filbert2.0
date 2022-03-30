@@ -14,6 +14,10 @@ export { default as FoodCort } from './FoodCort/FoodCort';
 
 // News page
 export { default as News } from './pages/News';
+export { default as Rating } from './Rating/Rating';
+export { default as NewsBlock } from './NewsBlock/NewsBlock';
+export { default as NewsHeader } from './NewsHeader/NewsHeader';
+export { default as NewsPapers } from './NewsPapers/NewsPapers';
 
 // Footer
 export { default as Footer } from './Footer/Footer';

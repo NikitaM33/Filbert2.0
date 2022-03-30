@@ -27,14 +27,20 @@ $bigRadius: 1.18rem;
 
 // Main border
 $border: 2px solid #FFBE2E;
+$whiteBorder: 3px solid #F2F2F2; 
+$newsBorder: 1px solid #d4d4d4;
 
-// Main shadow
-$shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, .25);
+// Shadows
+$shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 $hoverButtonShadow: 0 5px 7px rgba(0, 0, 0, .5);
 $activeButtonShadow: 0 3px 7px rgba(0, 0, 0, .5);
 $subShadow: 0px 0px 26px rgba(0, 0, 0, .3);
 $allOverShadow: 0 0 13px rgba(0, 0, 0, .7);
+$bigTopShadow: 0 7px 24px rgba(0, 0, 0, .7);
+$smallTopShadow: 0 9px 3px rgba(0, 0, 0, .3);
 $downShadow: 0px 3px 13px rgba(0, 0, 0, 0.2);
+$yellowShadow: 0 5px 7px rgba(255, 190, 46, 0.8);
+$rightShadow: 10px 0 10px rgba(0, 0, 0, .6);
 
 // Opacity
 $O7: 0.7;
@@ -57,9 +63,10 @@ $corpYellowTransparent: rgba(255, 189, 46, 0.4);
 $corpWhite: #F2F2F2;
 $subColor: #b8b8b8;
 $h1: #08415C;
-$h1Hover: #18536e;
+$h1Hover: #185f80;
 $mainText: #404040;
 $dropShadow: rgba(0, 0, 0, .4);
+$scrollBar: #b89a55;
 
 // Media querys
 $mobileL: 424px;

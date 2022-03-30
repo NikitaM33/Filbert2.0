@@ -1,0 +1,120 @@
+.newsHeader {
+    position: relative;
+    display: flex;
+    // justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 20em;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        height: 100%;
+        border-left: 0 solid transparent;
+        
+        filter: drop-shadow($rightShadow);
+        z-index: -1;
+    }
+
+    &::before {
+        width: 70%;
+        // width: 100%;
+        // border-bottom: 20rem solid $h1;
+        border-right: 0 solid transparent;
+        border-bottom: 20rem solid $h1;
+
+        @media screen and(min-width: $tablet) {
+            width: 90%;
+            border-right: 18rem solid transparent;
+        }
+
+        @media screen and(min-width: $laptop) {
+            width: 75%;
+        }
+    }
+
+    &::after {
+        // width: 62%;
+        width: 100%;
+        border-right: 0 solid transparent;
+        border-bottom: 20rem solid $corpYellow;
+
+        @media screen and(min-width: $tablet) {
+            width: 80%;
+            border-right: 18rem solid transparent;
+        }
+
+        @media screen and(min-width: $laptop) {
+            width: 62%;
+        }
+    }
+
+    &__text {
+        // flex: 0 0 49%;
+        width: calc(100% - 2.5rem);
+        margin: 0 auto;
+        // padding: $YPadding 0 $YPadding 14%;
+        padding: 0;
+        text-align: center;
+
+        @media screen and(min-width: $tablet) {
+            flex: 0 0 49%;
+            width: inherit;
+            margin: 0;
+            padding: 3rem 0 $YPadding 3%;
+            text-align: inherit;
+        }
+
+        @media screen and(min-width: $laptop) {
+            padding: 3rem 0 $YPadding 5%;
+        }
+
+        @media screen and(min-width: $laptop) {
+            padding: 3rem 0 $YPadding 5%;
+        }
+
+        @media screen and(min-width: 1500px) {
+            padding: 3rem 0 $YPadding 14%;
+        }
+
+        @media screen and(min-width: 1800px) {
+            padding: 3rem 0 $YPadding 18%;
+        }
+
+        @media screen and(min-width: 2300px) {
+            padding: 3rem 0 $YPadding 26%;
+        }
+    }
+}
+
+.newsImage {
+    display: none;
+
+    @media screen and(min-width: $tablet) {
+        display: block;
+        flex: 0 0 51%;
+        height: 100%;
+        z-index: -2;
+    }
+
+    
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        @media screen and(min-width: $tablet) {
+            object-position: 2rem center;
+        }
+
+        @media screen and(min-width: $laptop) {
+            object-position: center;
+        }
+    }
+}

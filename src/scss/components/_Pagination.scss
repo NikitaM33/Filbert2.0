@@ -1,0 +1,22 @@
+.pagination {
+    margin: 0 1rem 0 0;
+
+    &:last-child{
+        margin: 0 0 0 0;
+    }
+
+    &__scrollTheFeed {
+        font-size: $fontSubHead;
+        color: $h1;
+
+        &:hover {
+            color: $corpYellow;
+        }
+    }
+}
+
+.activeScrollTheFeed {
+    font-weight: $fat;
+    color: $corpYellow;
+    text-shadow: $shadow;
+}
