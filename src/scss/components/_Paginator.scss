@@ -3,6 +3,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 8;
+
+    &__newsBox {
+        position: relative;
+    }
 
     &__pagination {
         display: flex;

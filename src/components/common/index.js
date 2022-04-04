@@ -7,3 +7,4 @@ export { default as BlockHeader } from './BlockHeader/BlockHeader';
 
 export { default as NewsCell } from './NewsCell/NewsCell';
 export { default as NewsModal } from './Popups/NewsModal';
+export { default as NewsPopup } from './Popups/NewsPopup';

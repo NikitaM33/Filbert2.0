@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 
 const newsModal = document.querySelector('#modal');
 
-const NewsModal = ({ children, id }) => {
+const NewsModal = ({ children, isModalOpen, setIsModalOpen }) => {
   const element = useMemo(() => document.createElement('div'), []);
   const ref = useRef();
   // const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,23 +13,30 @@ const NewsModal = ({ children, id }) => {
   // }
 
   useEffect(() => {
-    newsModal.appendChild(element);
+    if (isModalOpen) {
+      newsModal.appendChild(element);
 
-    return () => {
-      newsModal.removeChild(element);
+      return () => {
+        newsModal.removeChild(element);
+      }
     }
-  }, []);
+  });
 
-  return createPortal(
-    <div className="newsModal">
-      <div className="newsModal__screen screen">
-        <div className="screen__item">
-          <h3>{children}</h3>
+  if (isModalOpen) {
+    return createPortal(
+      <div className="newsModal" onClick={() => {setIsModalOpen(false)}}>
+        <div className="newsModal__screen screen">
+          <div className="screen__item">
+            <h3>{children}</h3>
+          </div>
         </div>
       </div>
-    </div>
-    , element
-  );
+      , element
+    );
+  }
+
+  return null;
+
   // (
   // <div className="modal">
   //   {/* <Link to={`http://192.168.10.185:8080/news?newsID=${id}`}>Читать</Link> */}

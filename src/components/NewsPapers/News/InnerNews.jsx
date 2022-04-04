@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 
 import { NewsCell } from '@common';
 import Pagination from '../Pagination/Pagination';
-import NewsModal from '@common/Popups/NewsModal'
+import NewsModal from '@common/Popups/NewsModal';
+import NewsPopup from '@common/Popups/NewsPopup';
 
-const InnerNews = ({ innerNewsItems }) => {
+const InnerNews = ({ innerNewsItems, isModalOpen, setIsModalOpen }) => {
   const [currentPage, setCurrentPage] = useState(1); // Test
   const [innerNewsPageSize] = useState(1);
   const [innerNewsPerPage] = useState(1);
@@ -32,19 +33,24 @@ const InnerNews = ({ innerNewsItems }) => {
 
   return (
     <div className="pagin">
-      {
-        currentInnerNews && currentInnerNews.map((item) => {
-          return (
-            <NewsCell
-              key={item.id}
-              newsId={item.id}
-              newsImage={item.source.newsImage}
-              newsHeader={item.source.newsHeader}
-              newsTitle={item.source.newsTitle}
-            />
-          )
-        })
-      }
+      <div className="pagin__newsBox">
+        {
+          currentInnerNews && currentInnerNews.map((item) => {
+            return (
+              <NewsCell
+                key={item.id}
+                newsId={item.id}
+                newsImage={item.source.newsImage}
+                newsHeader={item.source.newsHeader}
+                newsTitle={item.source.newsTitle}
+                // isModalOpen={isModalOpen}
+                // setIsModalOpen={setIsModalOpen}
+                innerNews
+              />
+            )
+          })
+        }
+      </div>
 
       <div className="pagin__pagination">
         <Pagination
@@ -55,8 +61,6 @@ const InnerNews = ({ innerNewsItems }) => {
           onPaginate={paginate}
         />
       </div>
-
-      <NewsModal></NewsModal>
     </div>
   )
 }

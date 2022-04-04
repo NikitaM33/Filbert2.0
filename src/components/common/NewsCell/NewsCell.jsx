@@ -3,16 +3,21 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useDispatch } from 'react-redux';
 
-import { openNewsModal } from '@redux/actions/fetchAllNews';
+import { NewsModal } from '@common';
+import { NewsPopup } from '@common';
 
-const NewsCell = ({ column, newsId, newsImage, newsHeader, newsTitle }) => {
+const NewsCell = ({
+  column,
+  innerNews,
+  worldNews,
+  collectionNews,
+  newsId,
+  newsImage,
+  newsHeader,
+  newsTitle
+}) => {
   const dispatch = useDispatch();
   let articleLength = null;
-
-  const openModal = (e) => {
-    console.log('Modal')
-    dispatch(openNewsModal());
-  }
 
   if (column) {
     articleLength = newsTitle > 250 ?
@@ -63,9 +68,13 @@ const NewsCell = ({ column, newsId, newsImage, newsHeader, newsTitle }) => {
           }
         )}>
           {
-            newsTitle && <div className="modal__trigger" onClick={openModal}>
-              Читать
-            </div>
+            newsTitle &&
+            <NewsPopup
+              innerNews={innerNews}
+              worldNews={worldNews}
+              collectionNews={collectionNews}
+              id={newsId}
+            />
           }
         </div>
       </div>

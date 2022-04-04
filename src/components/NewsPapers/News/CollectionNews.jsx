@@ -44,7 +44,7 @@ const CollectionNews = ({ newsItems, column, world, collect }) => {
                 <NewsCell
                   key={item.id}
                   column={column ? column : ''}
-                  id={item.id}
+                  newsId={item.id}
                   newsImage={item.newsImage}
                   newsHeader={item.newsHeader}
                   newsTitle={item.source.newsTitle}

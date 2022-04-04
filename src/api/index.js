@@ -44,5 +44,9 @@ export const newsAPI = {
     //   .then(function (response) {
     //     return response.json();
     //   })
+  },
+  getNewsById(newsId) {
+    console.log('Fetch news');
+    return newsId;
   }
 }

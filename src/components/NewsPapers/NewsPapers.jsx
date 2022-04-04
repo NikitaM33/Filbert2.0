@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { fetchWorldNews } from '@redux/actions/fetchAllNews';
@@ -9,11 +9,13 @@ import CollectionNews from './News/CollectionNews';
 const NewsPapers = () => {
   const dispatch = useDispatch();
   const ref = useRef();
+  const [ isModalOpen, setIsModalOpen ] = useState(false);
   const {
     innerNewsItems,
     worldNewsItems,
     collectionNewsItems,
-    // currentPage
+    // currentPage,
+    // isModalOpen
   } = useSelector(({ news }) => news);
 
   // Отслеживание изменения экрана
@@ -45,6 +47,8 @@ const NewsPapers = () => {
           <div className="newspaper__items">
             <InnerNews
               innerNewsItems={innerNewsItems}
+              isModalOpen={isModalOpen}
+              setIsModalOpen={setIsModalOpen}
             />
           </div>
         </div>
@@ -56,6 +60,8 @@ const NewsPapers = () => {
               newsItems={worldNewsItems}
               column
               world
+              isModalOpen={isModalOpen}
+              setIsModalOpen={setIsModalOpen}
             />
           </div>
         </div>
@@ -67,6 +73,8 @@ const NewsPapers = () => {
               newsItems={collectionNewsItems}
               column
               collect
+              isModalOpen={isModalOpen}
+              setIsModalOpen={setIsModalOpen}
             />
           </div>
         </div>
