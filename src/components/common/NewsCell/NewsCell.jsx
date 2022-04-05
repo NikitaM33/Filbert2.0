@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import { useDispatch } from 'react-redux';
 
-import { NewsModal } from '@common';
 import { NewsPopup } from '@common';
 
 const NewsCell = ({

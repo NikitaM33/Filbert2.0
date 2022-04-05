@@ -1,0 +1,36 @@
+.announcements {
+    position: relative;
+    padding: $YPadding 0;
+    background-image: $corpYellowGradientTransparent, url(../../assets/testNews.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 61%;
+        bottom: -70rem;
+        width: 42.8rem;
+        transform: translate(0, -50%) skew(-30deg);
+        background: $h1;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__headerBlock {
+        max-width: 40%;
+    }
+
+    &__logo {
+        img {
+            filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 1));
+        }
+    }
+}

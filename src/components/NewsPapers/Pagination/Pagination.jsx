@@ -4,7 +4,7 @@ import cn from 'classnames';
 
 import arrowScroll from '../../../assets/icons/arrowScrollYellow.svg';
 
-const Pagination = ({ pages, currentPage, setCurrentPage, onPaginate }) => {
+const Pagination = ({ onDark, pages, currentPage, setCurrentPage, onPaginate }) => {
   const nextPage = () => setCurrentPage((prev) => {
     if (prev >= pages.length) {
       return pages.length;
@@ -40,7 +40,8 @@ const Pagination = ({ pages, currentPage, setCurrentPage, onPaginate }) => {
                 <Link to="#" className={cn(
                   'pagination__scrollTheFeed',
                   {
-                    'activeScrollTheFeed': page === currentPage
+                    'activeScrollTheFeed': page === currentPage,
+                    'onDark': onDark
                   }
                 )} onClick={() => onPaginate(page)}>{page}</Link>
               </li>

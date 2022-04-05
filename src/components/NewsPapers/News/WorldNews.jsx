@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { NewsCell } from '@common';
 import Pagination from '../Pagination/Pagination';
 
-const WorldNews = ({ newsItems, column, isModalOpen, setIsModalOpen }) => {
+const WorldNews = ({ newsItems, column }) => {
   const [ currentPage, setCurrentPage ] = useState(1); // Test
   const [ newsPageSizeBigScreen ] = useState(3); // Count of page in pagination
   const [ newsPerPageBigScreen ] = useState(3); // Count of item on page
@@ -44,8 +44,6 @@ const WorldNews = ({ newsItems, column, isModalOpen, setIsModalOpen }) => {
                   newsImage={item.newsImage}
                   newsHeader={item.newsHeader}
                   newsTitle={item.source.newsTitle}
-                  // isModalOpen={isModalOpen}
-                  // setIsModalOpen={setIsModalOpen}
                   worldNews
                 />
               </div>

@@ -5,7 +5,8 @@ import { HeaderText } from '@common';
 import { getLeadersInfo } from '@redux/actions/getLeadersInfo';
 import {
   Rating,
-  NewsBlock
+  NewsBlock,
+  Announcements
 } from '../';
 import filbertTeam from '@assets/filbertTeam.png';
 
@@ -38,6 +39,7 @@ const News = () => {
         leaders={leaders}
       />
       <NewsBlock />
+      <Announcements />
     </div>
   )
 }

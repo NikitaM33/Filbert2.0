@@ -50,3 +50,10 @@ export const newsAPI = {
     return newsId;
   }
 }
+
+export const announcementsApi = {
+  fetchAnnouncements() {
+    console.log('Fetch announcements');
+    return 'In progress...'
+  }
+}

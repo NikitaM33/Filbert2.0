@@ -14,11 +14,9 @@ const NewsPapers = () => {
     innerNewsItems,
     worldNewsItems,
     collectionNewsItems,
-    // currentPage,
-    // isModalOpen
   } = useSelector(({ news }) => news);
 
-  // Отслеживание изменения экрана
+  // Отслеживание изменения экрана ЭТО МОЖЕТ ПРИГОДИТЬСЯ!!!!
 
   // const observer = useRef(
   //   new ResizeObserver((entries) => {

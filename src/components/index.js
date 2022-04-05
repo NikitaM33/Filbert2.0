@@ -18,6 +18,7 @@ export { default as Rating } from './Rating/Rating';
 export { default as NewsBlock } from './NewsBlock/NewsBlock';
 export { default as NewsHeader } from './NewsHeader/NewsHeader';
 export { default as NewsPapers } from './NewsPapers/NewsPapers';
+export { default as Announcements } from './Announcements/Announcements';
 
 // Footer
 export { default as Footer } from './Footer/Footer';

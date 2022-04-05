@@ -4,7 +4,7 @@
     justify-content: center;
     width: 100%;
     height: fit-content;
-    padding: 2.5rem 3rem 2rem 3rem;
+    padding: 1.5rem 3rem 1rem 3rem;
     border-radius: $mainRadius;
     box-shadow: $hoverButtonShadow;
     overflow: hidden;
@@ -165,6 +165,43 @@
         &__decoration:nth-child(7) {
             top: 61%;
             left: 91%;
+        }
+    }
+}
+
+.reverse {
+    order: 1;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        max-width: 22rem;
+        z-index: 3;
+
+        h2,
+        h3,
+        b,
+        p {
+            text-align: left;
+            text-shadow: $textShadow;
+        }
+
+        h2 {
+            font-weight: $thin;
+            color: $corpWhite;
+            margin-bottom: $YPadding;
+        }
+
+        h3 {
+            width: 100%;
+            color: $corpYellow;
+        }
+
+        b {
+            font-weight: $medium;
+            color: $corpWhite;
         }
     }
 }

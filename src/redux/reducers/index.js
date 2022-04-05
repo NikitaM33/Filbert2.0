@@ -8,6 +8,7 @@ import foodCort from './foodCort';
 // News page
 import newsLeaders from './newsLeaders';
 import news from './news';
+import announcements from './announcements';
 
 const rootReducer = combineReducers({
   header,
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
   etiquette,
   foodCort,
   newsLeaders,
-  news
+  news,
+  announcements
 });
 
 export default rootReducer;

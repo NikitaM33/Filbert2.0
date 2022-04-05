@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
-import { BlockHeader } from '../common';
+import { BlockHeader } from '@common';
 
 const Rating = ({ leaders }) => {
   const topThree = leaders && leaders.sort((a, b) => a.fee - b.fee).reverse().slice(0, 3);

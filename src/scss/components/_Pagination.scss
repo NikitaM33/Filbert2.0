@@ -15,6 +15,14 @@
     }
 }
 
+.onDark {
+    color: $corpWhite;
+
+    &:hover {
+        color: $corpYellow;
+    }
+}
+
 .activeScrollTheFeed {
     font-weight: $fat;
     color: $corpYellow;
