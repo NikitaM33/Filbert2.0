@@ -39,13 +39,7 @@
         justify-content: center;
         max-width: 22rem;
 
-        h2,
-        b,
-        p {
-            color: $corpWhite;
-            text-align: center;
-            text-shadow: $textShadow;
-        }
+        
 
         h2 {
             font-weight: $thin;
@@ -55,6 +49,14 @@
         b {
             font-weight: $medium;
         }
+    }
+
+    & h2,
+    & b,
+    & p {
+        color: $corpWhite;
+        text-align: center;
+        text-shadow: $textShadow;
     }
 
     .headerBlock__decorations {
@@ -184,8 +186,15 @@
         h3,
         b,
         p {
-            text-align: left;
             text-shadow: $textShadow;
+
+            @media screen and (min-width: $mobileL) {
+                text-align: center;
+            }
+
+            @media screen and (min-width: $laptop) {
+                text-align: left;
+            }
         }
 
         h2 {

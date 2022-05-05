@@ -28,6 +28,7 @@ function Header() {
 
   const closeMenu = (e) => {
     setIsMenuOpen(false);
+    document.body.style.overflow = ''
   }
 
   const scrollMenu = () => {
@@ -76,7 +77,6 @@ function Header() {
 
   useEffect(() => {
     window.addEventListener('scroll', scrollMenu);
-
     window.addEventListener('resize', widthWatcher)
 
     return () => {
@@ -121,7 +121,6 @@ function Header() {
                       className={menuIndex === null ? 'active' : ''}
                       onClick={() => setActiveItem(null)}
                     >
-                      {/* <Link to="/" className="nav__link" onClick={closeMenu} data-counter='main'>Главная</Link> */}
                       <Link to="/" className='nav__link' onClick={closeMenu} data-counter='main'>Главная</Link>
                     </li>
 

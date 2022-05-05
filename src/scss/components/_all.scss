@@ -21,8 +21,10 @@
 @import 'NewsPapers';
 @import 'Pagination';
 @import 'Paginator';
+@import 'Announcement';
 @import 'Announcements';
 @import 'AnnouncementsList';
+@import 'CreateAnnouncement';
 
 // Footer
 @import 'Footer';
@@ -36,3 +38,5 @@
 @import 'common/NewsCell';
 @import 'common/NewsModal';
 @import 'common/NewsPopup';
+@import 'common/Registration';
+@import 'common/NotFound';

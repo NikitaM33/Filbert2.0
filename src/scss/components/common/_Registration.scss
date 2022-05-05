@@ -1,0 +1,220 @@
+.registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $YPadding 0 $YPadding 0;
+    opacity: 0;
+    visibility: collapse;
+
+    &__panel {
+        display: flex;
+        flex-direction: column;
+        padding: 2.7rem 2rem;
+        background: $corpBlue;
+        border: $border;
+        border-radius: $mainRadius;
+
+        & h2 {
+            margin-bottom: 2rem;
+            text-align: center;
+            color: $corpYellow;
+        }
+
+        & label {
+            display: flex;
+            flex-direction: column;
+            font-size: $text;
+            color: $corpYellow;
+
+            span,
+            b {
+                font-size: $text;
+                color: $corpYellow;
+            }
+        }
+    }
+
+    &__form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+    }
+
+    &__userNameContainer {
+        transition: $mainTransition;
+        transform: translateX(-10%);
+        opacity: 0;
+        visibility: collapse;
+    }
+
+    &__userName,
+    &__depart {
+
+        & input {
+            width: 100%;
+            margin: 0.3rem 0 0 0;
+            padding: 0.5rem 0.7rem;
+            border: 0;
+            outline: 0;
+            border-radius: $mainRadius;
+            color: $mainText;
+        }
+    }
+
+    &__checkData {
+        & b {
+            color: $corpYellow;
+        }
+    }
+}
+
+.signIn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.yesOrNoButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 0 0 0;
+
+    &__confirm,
+    &__reject {
+        flex: 0 0 48%;
+    }
+}
+
+.userSurnameContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: $mainTransition;
+    transform: translateX(-10%);
+    opacity: 0;
+    visibility: collapse;
+    
+
+    &__back {
+        align-self: flex-end;
+        color: $corpYellow;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__confimButtons {
+        transition: $mainTransition;
+        transform: translateX(-10%);
+        opacity: 0;
+        visibility: collapse;
+    }
+
+    &__insertSurname {
+        position: absolute;
+        top: 13%;
+        width: 100%;
+        transition: $mainTransition;
+        transform: translateX(-10%);
+        opacity: 0;
+        visibility: collapse;
+    }
+}
+
+.registrationDepart {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: $mainTransition;
+    transform: translateX(-10%);
+    opacity: 0;
+    visibility: collapse;
+
+    &__insertDepartment {
+        position: absolute;
+        top: 13%;
+        width: 100%;
+        transition: $mainTransition;
+        transform: translateX(-10%);
+        opacity: 0;
+        visibility: collapse;
+    }
+}
+
+.registrationComplete {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: $mainTransition;
+    transform: translateX(-10%);
+    opacity: 0;
+    visibility: collapse;
+
+    &__done {
+        position: absolute;
+        width: 100%;
+        transition: $mainTransition;
+        transform: translateX(-10%);
+        opacity: 0;
+        visibility: collapse;
+    }
+}
+
+.registrationActive {
+    transition: $mainTransition 0.3s;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.registrationSurnameActive {
+    width: 100%;
+    transition: $mainTransition 0.3s;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.registrationConfimButtons {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.isRegistrationInsert,
+.isRegistrationDepart {
+    top: 13%;
+    transition: $mainTransition 0.3s;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.registrationDepartActive {
+    width: 100%;
+    transition: $mainTransition 0.3s;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.completeRegistration,
+.finish {
+    position: absolute;
+    width: 100%;
+    transition: $mainTransition 0.3s;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.doneRegistrationBtn {
+    display: flex;
+    justify-content: center;
+}

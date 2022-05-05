@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
-import { useDispatch } from 'react-redux';
 
 import { NewsPopup } from '@common';
 
@@ -15,7 +14,6 @@ const NewsCell = ({
   newsHeader,
   newsTitle
 }) => {
-  const dispatch = useDispatch();
   let articleLength = null;
 
   if (column) {

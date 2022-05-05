@@ -16,6 +16,7 @@ const Announcements = () => {
               textH3={'Объявления'}
               textH2={'Раздел для публикаций'}
               textB={'объявлений'}
+              textP={'Здесь Вы можете разместить свое объявление'}
             />
           </div>
           <div className="announcements__logo">

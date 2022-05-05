@@ -1,5 +1,6 @@
 .announcements {
     position: relative;
+    margin-top: 4rem;
     padding: $YPadding 0;
     background-image: $corpYellowGradientTransparent, url(../../assets/testNews.jpg);
     background-repeat: no-repeat;
@@ -12,20 +13,43 @@
         content: '';
         top: 0;
         left: 61%;
-        bottom: -70rem;
+        
         width: 42.8rem;
         transform: translate(0, -50%) skew(-30deg);
         background: $h1;
+
+        @media screen and (min-width: $mobileL) {
+            bottom: -170rem;
+        }
+    }
+
+    &__logo {
+        @media screen and (min-width: $mobileL) {
+            display: none;
+        }
+
+        @media screen and (min-width: $laptop) {
+            display: block;
+        }
     }
 
     &__header {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
+
+        @media screen and (min-width: $laptop) {
+            flex-direction: row;
+        }
     }
 
     &__headerBlock {
-        max-width: 40%;
+        max-width: 100%;
+
+        @media screen and (min-width: $laptop) {
+            max-width: 50%;
+        }
     }
 
     &__logo {

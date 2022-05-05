@@ -5,8 +5,10 @@ import {
   Header,
   Main,
   News,
+  CreateAnnouncement,
   Footer
 } from './components';
+import { NotFound } from './components/common';
 
 function App() {
   return (
@@ -15,8 +17,11 @@ function App() {
           <Route path="/" element={<Header />}>
             <Route index element={<Main />} />
             <Route path="news" element={<News />} />
-            {/* <Route path="*" element={<NotFound />} /> */}
-            {/* <Route element={<NotFound />} /> */}
+            {/* <Route path="auth" element={<Auth />} /> */}
+            <Route path="createAnnouncement" exact element={<CreateAnnouncement/>} />
+
+            {/* TODO: Доделать NotFound! */}
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
 

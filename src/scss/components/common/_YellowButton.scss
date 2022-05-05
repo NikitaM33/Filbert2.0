@@ -47,6 +47,8 @@
 }
 
 .disable {
+    background: $corpYellowTransparent;
+    color: $subColor;
     cursor: unset;
     transform: translateY(0px);
     box-shadow: none;

@@ -55,5 +55,14 @@ export const announcementsApi = {
   fetchAnnouncements() {
     console.log('Fetch announcements');
     return 'In progress...'
+  },
+  getAnnouncementById(id) {
+    console.log('Fetch announcement by id', id);
+    return id
+  },
+  setAuth(userData) {
+    console.log('Fetching user auth', userData);
+
+    return true;
   }
 }

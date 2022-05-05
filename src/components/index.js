@@ -19,6 +19,7 @@ export { default as NewsBlock } from './NewsBlock/NewsBlock';
 export { default as NewsHeader } from './NewsHeader/NewsHeader';
 export { default as NewsPapers } from './NewsPapers/NewsPapers';
 export { default as Announcements } from './Announcements/Announcements';
+export { default as CreateAnnouncement } from './Announcements/CreateAnnouncement';
 
 // Footer
 export { default as Footer } from './Footer/Footer';
