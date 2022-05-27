@@ -25,6 +25,12 @@
 @import 'Announcements';
 @import 'AnnouncementsList';
 @import 'CreateAnnouncement';
+@import 'NewWorkers';
+
+// Corp live page
+@import 'CorpLive';
+@import 'TodayBirthday';
+@import 'PartyBanner';
 
 // Footer
 @import 'Footer';
@@ -39,4 +45,5 @@
 @import 'common/NewsModal';
 @import 'common/NewsPopup';
 @import 'common/Registration';
+@import 'common/MainUserCard';
 @import 'common/NotFound';

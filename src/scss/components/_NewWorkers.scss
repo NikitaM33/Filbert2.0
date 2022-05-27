@@ -1,0 +1,62 @@
+.newWorkers {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: $YPadding 0 0 0;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__headerText {
+        max-width: 100%;
+
+        @media screen and (min-width: $laptop) {
+            max-width: 50%;
+            height: 39vw;
+        }
+        
+        @media screen and (min-width: $laptopL) {
+            height: 29vw;
+        }
+    }
+
+    &__headerImg {
+        
+        width: 100%;
+        overflow: hidden;
+
+        @media screen and (min-width: $laptop) {
+            position: absolute;
+            z-index: -1;
+        }
+
+        & img {
+            width: 102%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+            transform: translate(-1%, 3%);
+        }
+    }
+
+    &__newPersonList {
+        margin: -2px 0 0 0;
+        padding: $YPadding 0;
+        background: $corpBlueLinear;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (min-width: $tablet) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

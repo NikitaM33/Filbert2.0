@@ -86,3 +86,17 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+.h1Sub {
+    text-align: center;
+    color: $subColor;
+    text-shadow: $shadow;
+}
+
+.error {
+    width: 100%;
+    height: 2rem;
+    font-size: 1.1rem;
+    color: $error;
+    text-align: center;
+}

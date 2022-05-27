@@ -1,0 +1,483 @@
+@import '../mixins/birthdayBlink';
+
+.todayBirthday {
+    @include birthday;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: $YPadding 0;
+
+        & p {
+            text-align: right !important;
+        }
+    }
+
+    &__headerCircle {
+        position: relative;
+    }
+
+    &__headerCircle div:nth-child(1),
+    &__headerCircle div:nth-child(2),
+    &__headerCircle div:nth-child(3),
+    &__headerCircle div:nth-child(4),
+    &__headerCircle div:nth-child(5),
+    &__headerCircle div:nth-child(6),
+    &__headerCircle div:nth-child(7) {
+        position: absolute;
+    }
+
+    &__headerCircle div:nth-child(1) {
+        top: 0;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        filter: blur(2px);
+        animation: starBlink step-end 4s 0.5s infinite;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__headerCircle div:nth-child(2) {
+        top: 5vw;
+        left: 35vw;
+        width: 3rem;
+        height: 3rem;
+        filter: blur(1px);
+        animation: starBlink step-end 3s 0s infinite;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__headerCircle div:nth-child(3),
+    &__headerCircle div:nth-child(4),
+    &__headerCircle div:nth-child(5),
+    &__headerCircle div:nth-child(6),
+    &__headerCircle div:nth-child(7) {
+        background: $corpBlue;
+        border-radius: 50%;
+    }
+
+    &__headerCircle div:nth-child(3) {
+        top: 9vw;
+        left: 5vw;
+        width: 1rem;
+        height: 1rem;
+        filter: blur(2px);
+        opacity: 0.6;
+        animation: birthdayScale ease 2s 0s infinite;
+    }
+
+    &__headerCircle div:nth-child(4) {
+        top: 3vw;
+        left: 15vw;
+        width: 5rem;
+        height: 5rem;
+        filter: blur(1px);
+        opacity: 0.8;
+        animation: birthdayScale ease 3.1s 0s infinite;
+    }
+
+    &__headerCircle div:nth-child(5) {
+        top: 11vw;
+        left: 29vw;
+        width: 8rem;
+        height: 8rem;
+        animation: birthdayScale ease 8s 0s infinite;
+    }
+
+    &__headerCircle div:nth-child(6) {
+        top: 15vw;
+        left: 46vw;
+        width: 2rem;
+        height: 2rem;
+        filter: blur(3px);
+        opacity: 0.8;
+        animation: birthdayScale ease 3s 0s infinite;
+    }
+
+    &__headerCircle div:nth-child(7) {
+        top: -3vw;
+        left: 44vw;
+        width: 6rem;
+        height: 6rem;
+        filter: blur(2px);
+        opacity: 0.9;
+        z-index: 3;
+        animation: birthdayScale ease 5s 0s infinite;
+    }
+
+    &__cardFooter {
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        & label {
+            font-size: $text;
+            font-weight: $medium;
+            color: $h1;
+            line-height: 1.1rem;
+
+            & textarea {
+                width: 100%;
+                margin: 1rem 0;
+                padding: 0.5rem 0.6rem;
+                border: $newsBorder;
+                border-radius: $mainRadius;
+                resize: none;
+                outline: none;
+            }
+        }
+    }
+
+    &__btnContaier {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__emoji,
+    &__sendBtn {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: transparent;
+        font-size: $normal;
+        color: $h1;
+        opacity: 0.7;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: $mainTransition;
+
+        & svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.personEvent {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10rem 0 0 0;
+    padding: $YPadding 0;
+    z-index: 5;
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__background div:nth-child(1),
+    &__background div:nth-child(2),
+    &__background div:nth-child(3),
+    &__background div:nth-child(4),
+    &__background div:nth-child(5),
+    &__background div:nth-child(6),
+    &__background div:nth-child(7),
+    &__background div:nth-child(8),
+    &__background div:nth-child(9),
+    &__background div:nth-child(10),
+    &__background div:nth-child(11),
+    &__background div:nth-child(12) {
+        position: absolute;
+    }
+
+    &__background div:nth-child(1) {
+        top: -10vw;
+        left: 8vw;
+        filter: blur(1px);
+        animation: starBlink step-end 5s 0.3s infinite;
+    }
+
+    &__background div:nth-child(2) {
+        top: -2vw;
+        left: 68vw;
+        width: 3rem;
+        height: 3rem;
+        filter: blur(2px);
+        animation: starBlink step-end 3s 0.6s infinite;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__background div:nth-child(3) {
+        top: 43vw;
+        left: 31vw;
+        width: 5rem;
+        height: 5rem;
+        filter: blur(2px);
+        animation: starBlink step-end 2s 0.12s infinite;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__background div:nth-child(4) {
+        top: 55vw;
+        left: 64vw;
+        width: 4rem;
+        height: 4rem;
+        filter: blur(1px);
+        animation: starBlink step-end 2s 0.8s infinite;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__background div:nth-child(5) {
+        top: 55vw;
+        left: 0vw;
+        width: 3rem;
+        height: 3rem;
+        filter: blur(2px);
+        animation: starBlink step-end 2s 0.3s infinite;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__background div:nth-child(6),
+    &__background div:nth-child(7),
+    &__background div:nth-child(8),
+    &__background div:nth-child(9),
+    &__background div:nth-child(10),
+    &__background div:nth-child(11),
+    &__background div:nth-child(12) {
+        border-radius: 50%;
+        background: $corpBlue;
+    }
+
+    &__background div:nth-child(6) {
+        top: 4vw;
+        left: 5vw;
+        width: 3.5rem;
+        height: 3.5rem;
+        background: $corpBlue;
+        filter: blur(2px);
+        animation: birthdayScale ease 5s 0s infinite;
+    }
+
+    &__background div:nth-child(7) {
+        top: 10vw;
+        left: 21vw;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: $corpBlue;
+        filter: blur(3px);
+        opacity: 0.6;
+        animation: birthdayScale ease 3s 0s infinite;
+    }
+
+    &__background div:nth-child(8) {
+        top: 21vw;
+        left: 35vw;
+        width: 1rem;
+        height: 1rem;
+        filter: blur(1px);
+        animation: birthdayScale ease 6s 0s infinite;
+    }
+
+    &__background div:nth-child(9) {
+        top: 34vw;
+        left: 49vw;
+        width: 4rem;
+        height: 4rem;
+        filter: blur(2px);
+        animation: birthdayScale ease 2s 0s infinite;
+    }
+
+    &__background div:nth-child(10) {
+        top: 56vw;
+        left: 29vw;
+        width: 5rem;
+        height: 5rem;
+        filter: blur(3px);
+        animation: birthdayScale ease 8s 0s infinite;
+    }
+
+    &__background div:nth-child(11) {
+        top: 31vw;
+        left: 22vw;
+        width: 2.5rem;
+        height: 2.5rem;
+        filter: blur(3px);
+        opacity: 0.98;
+        animation: birthdayScale ease 4.5s 0s infinite;
+    }
+
+    &__background div:nth-child(12) {
+        top: 49vw;
+        left: 72vw;
+        width: 3.5rem;
+        height: 3.5rem;
+        filter: blur(3px);
+        animation: birthdayScale ease 3s 0s infinite;
+    }
+
+
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 23rem;
+        min-height: 66rem;
+        margin: 0 0.5rem 7rem 0;
+        padding: 2rem;
+        background: linear-gradient(137deg, #f2f2f280 34.51%, #ffffff 51.09%, #f2f2f2c0 37.09%);
+        border-radius: $mainRadius;
+        box-shadow: $shadow;
+        backdrop-filter: blur(2px);
+
+        &:last-child {
+            margin: 0 0 7rem 0;
+        }
+    }
+
+    &__cardHeader {
+        width: 13rem;
+        height: 13rem;
+        margin: -9rem 0 0 0;
+        border: 3px solid $corpYellow;
+        border-radius: 50%;
+        box-shadow: $shadow;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__cardBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__personInfo {
+        padding: 1rem 0 0 0;
+    }
+
+    &__name,
+    &__depart {
+        text-align: center;
+        text-shadow: $textShadow;
+    }
+
+    &__name {
+        margin: 0 0 0.5rem 0;
+        font-weight: $medium;
+        color: $h1;
+    }
+
+    &__depart {
+        width: 20rem;
+        height: 2.5rem;
+        white-space: nowrap;
+        font-size: $fontSubHead;
+        font-weight: $thin;
+        color: $mainText;
+        overflow: hidden;
+    }
+
+    &__personCorpCongrat {
+        position: relative;
+        padding: 0.8rem 1rem;
+        text-align: center;
+        border: $border;
+        border-radius: $mainRadius;
+
+        & img {
+            position: absolute;
+            top: 64%;
+            left: 91%;
+            width: 15%;
+            animation: starBlink step-end 4s 0.5s infinite;
+        }
+    }
+
+    &__corpCongratText {
+        margin: 0;
+    }
+
+    &__personCongrats {
+        padding: 0 0.8rem 0 0;
+        height: 26rem;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            background: $corpWhite;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $subColor;
+            border-radius: $mainRadius;
+        }
+    }
+}
+
+.eventMessage {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem 1rem 1rem;
+    background: #fff;
+    border: $newsBorder;
+    border-radius: $mainRadius;
+    box-shadow: $shadow;
+
+    &__name {
+        font-weight: $medium;
+        color: $h1;
+    }
+
+    &__message {
+        margin: 0.5rem 0 0 0;
+        font-size: $text;
+    }
+}
+
+hr {
+    width: 100%;
+    margin: 2.3rem 0;
+}

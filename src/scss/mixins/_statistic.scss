@@ -447,6 +447,30 @@
             transform: translateX(0);
         }
     }
+
+    @keyframes daigonalStrightMovment {
+        0% {
+            transform: translateX(0) translateY(0) rotate(-45deg);
+        }
+
+        100% {
+            transform: translateX(100rem) translateY(100rem) rotate(-45deg);
+        }
+    }
+
+    @keyframes daigonalReturnMovment {
+        0% {
+            transform: translateX(0) translateY(0) rotate(-45deg);
+        }
+
+        50% {
+            transform: translateX(30rem) translateY(30rem) rotate(-45deg);
+        }
+
+        100% {
+            transform: translateX(0) translateY(0) rotate(-45deg);
+        }
+    }
 }
 
 @mixin region () {

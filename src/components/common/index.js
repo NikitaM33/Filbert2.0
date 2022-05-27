@@ -8,3 +8,5 @@ export { default as NewsCell } from './NewsCell/NewsCell';
 export { default as NewsPopup } from './Popups/NewsPopup';
 export { default as Registration } from './Registration/Registration';
 export { default as NotFound } from './NotFound/NotFound';
+export { default as MainUserCard } from './UserCards/MainUserCard';
+export { default as UserBirthdayCard } from './UserBirthdayCard/UserBirthdayCard';

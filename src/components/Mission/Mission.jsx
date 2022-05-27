@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import cn from 'classnames';
 
-import handshake from '../../assets/icons/handshake-solid.svg';
-import lock from '../../assets/icons/lock-solid.svg';
-import efficiency from '../../assets/icons/thumbs-up-solid.svg';
-import balance from '../../assets/icons/balance-scale-solid.svg';
+import handshake from '@assets/icons/handshake-solid.svg';
+import lock from '@assets/icons/lock-solid.svg';
+import efficiency from '@assets/icons/thumbs-up-solid.svg';
+import balance from '@assets/icons/balance-scale-solid.svg';
 import { MainSideBox } from '@common';
 import { AnimationPosition } from '../../helpers/AnimationPosition';
 

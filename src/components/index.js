@@ -20,6 +20,12 @@ export { default as NewsHeader } from './NewsHeader/NewsHeader';
 export { default as NewsPapers } from './NewsPapers/NewsPapers';
 export { default as Announcements } from './Announcements/Announcements';
 export { default as CreateAnnouncement } from './Announcements/CreateAnnouncement';
+export { default as NewWorkers } from './NewWorkers/NewWorkers';
+
+// Corp live page
+export { default as CorpLive } from './pages/CorpLive';
+export { default as TodayBirthday } from './TodayBirthday/TodayBirthday';
+export { default as PartyBanner } from './PartyBanner/PartyBanner';
 
 // Footer
 export { default as Footer } from './Footer/Footer';

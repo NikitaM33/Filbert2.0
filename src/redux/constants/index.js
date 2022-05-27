@@ -1,18 +1,18 @@
-// Common
+// COMMON
 export const SET_LOAD = 'SET_LOAD';
 
-// Header
+// HEADER
 export const SET_MANU_ACTIVE = 'SET_MANU_ACTIVE';
 export const SET_SUB_MENU_ACTIVE = 'SET_SUB_MENU_ACTIVE';
 
-//API
+// API
 export const INSTANCE_URL = '/INSTANCE_URL/';
 export const GET_LEADERS = 'GET_LEADERS/';
 
-// Office map
+// OFFICE MAP
 export const SET_ACTIVE_OFFICE = "SET_ACTIVE_OFFICE";
 
-//News page
+// NEWS PAGE
 export const GET_LEADERS_INFO = 'GET_LEADERS_INFO';
 // export const GET_WORLD_NEWS = 'https://rssexport.rbc.ru/rbcnews/news/30/full.rss';
 export const GET_WORLD_NEWS = 'TEST';
@@ -23,3 +23,7 @@ export const SET_COLLECTION_NEWS_BY_ID = 'SET_COLLECTION_NEWS_BY_ID';
 export const SET_ANNOUNCEMENTS = 'SET_ANNOUNCEMENTS';
 export const SET_ANNOUNCEMENT_BY_ID = 'SET_ANNOUNCEMENT_BY_ID';
 export const SET_SIGNED = 'SET_SIGNED';
+export const SET_NEW_WORKERS = 'SET_NEW_WORKERS';
+
+// CORP LIVE PAGE
+export const SET_BIRTHDAYS = 'SET_BIRTHDAYS';

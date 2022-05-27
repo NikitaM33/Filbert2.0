@@ -66,3 +66,19 @@ export const announcementsApi = {
     return true;
   }
 }
+
+export const newUsersApi = {
+  fetchNewWorkers() {
+    console.log('Fetching new workers');
+
+    return 'In progress...'
+  }
+}
+
+export const birthdaysAPI = {
+  getBirthdays() {
+    console.log('Fetching birthdays');
+
+    return 'In progress...'
+  }
+}

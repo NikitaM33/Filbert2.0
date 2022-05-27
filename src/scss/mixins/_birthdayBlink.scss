@@ -1,0 +1,35 @@
+@mixin birthday () {
+    @keyframes birthdayScale {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes starBlink {
+        98% {
+            filter: drop-shadow(0 5px 7px rgba(255, 205, 98, 0.8));
+        }
+    }
+
+    @keyframes youFloatToo {
+        0% {
+            transform: translateY(0%)
+        }
+
+        50% {
+            transform: translateY(-10%)
+        }
+
+        100% {
+            transform: translateY(0)
+        }
+    }
+}

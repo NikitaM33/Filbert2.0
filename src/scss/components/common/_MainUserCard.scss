@@ -1,0 +1,106 @@
+.mainPersonCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // width: 28%;
+    width: 80%;
+    margin: 0 5% 8vw 0;
+    filter: drop-shadow($allOverShadow);
+    overflow: hidden;
+
+    @media screen and (min-width: $tablet) {
+        width: 45%;
+    }
+
+    @media screen and (min-width: $laptop) {
+        width: 28%;
+    }
+
+    &__photo {
+        width: 45vw;
+        height: 45vw;
+        margin: 0rem 0 -3rem 0rem;
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 1;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @media screen and (min-width: $tablet) {
+            width: 31vw;
+            height: 31vw;
+        }
+
+        @media screen and (min-width: $laptop) {
+            width: 16vw;
+            height: 16vw;
+        }
+
+        @media screen and (min-width: 1937px) {
+            width: 12vw;
+            height: 12vw;
+        }
+    }
+
+    &__descr {
+        padding: 4rem 1.5rem 1.5rem 1.5rem;
+        text-align: center;
+        width: 100%;
+        background: $corpYellowGradient;
+        border-radius: $mainRadius;
+    }
+
+    &__personInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 54vw;
+        padding: 1rem;
+        border: $whiteBorder;
+        border-radius: $mainRadius;
+
+        @media screen and (min-width: $tablet) {
+            height: 32vw;
+        }
+
+        @media screen and (min-width: $laptop) {
+            height: 21vw;
+        }
+
+        @media screen and (min-width: $laptopL) {
+            height: 15vw;
+        }
+
+        @media screen and (min-width: 1937px) {
+            height: 10vw;
+        }
+    }
+
+    &__name {
+        margin: 0 0 0.5vw 0;
+        font-size: $fontSub;
+        font-weight: $fat;
+        color: $h1;
+    }
+
+    &__position {
+        margin: 0 0 1vw 0;
+        font-size: $text;
+        font-weight: $normal;
+        color: $h1;
+    }
+
+    &__depart {
+        // height: 11vw;
+        // overflow: hidden;
+    }
+}

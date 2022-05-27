@@ -82,14 +82,23 @@
         h2,
         b,
         p {
-            color: $h1; 
             text-align: center;
             text-shadow: $textShadow;
         }
 
+        h2,
+        h3 {
+            color: $h1;
+        }
+
         h2 {
-            font-weight: $thin;
-            margin-bottom: $YPadding;
+            font-weight: $medium;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            margin: 0;
+            font-weight: $normal;
         }
 
         b {

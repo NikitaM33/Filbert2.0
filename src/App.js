@@ -6,6 +6,7 @@ import {
   Main,
   News,
   CreateAnnouncement,
+  CorpLive,
   Footer
 } from './components';
 import { NotFound } from './components/common';
@@ -19,6 +20,7 @@ function App() {
             <Route path="news" element={<News />} />
             {/* <Route path="auth" element={<Auth />} /> */}
             <Route path="createAnnouncement" exact element={<CreateAnnouncement/>} />
+            <Route path="corpLive" element={<CorpLive />} />
 
             {/* TODO: Доделать NotFound! */}
             <Route path="*" element={<NotFound />} />
