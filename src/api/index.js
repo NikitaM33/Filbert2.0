@@ -7,7 +7,7 @@ import {
 } from '@redux/constants';
 
 const instance = axios.create({
-  withCredentials: true,
+  timeout: 3000,
   baseURL: INSTANCE_URL
 });
 
@@ -68,17 +68,13 @@ export const announcementsApi = {
 }
 
 export const newUsersApi = {
-  fetchNewWorkers() {
-    console.log('Fetching new workers');
-
-    return 'In progress...'
+  getNewWorkers() {
+    return instance.get('newWorker').catch(err => `Fetch new workers is failed ${err}`);
   }
 }
 
 export const birthdaysAPI = {
   getBirthdays() {
-    console.log('Fetching birthdays');
-
-    return 'In progress...'
+    return instance.get('greetingPhoto').catch(err => `Fetch birthdays is failed. ${err}`)
   }
 }

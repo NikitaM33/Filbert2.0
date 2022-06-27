@@ -26,6 +26,7 @@ export { default as NewWorkers } from './NewWorkers/NewWorkers';
 export { default as CorpLive } from './pages/CorpLive';
 export { default as TodayBirthday } from './TodayBirthday/TodayBirthday';
 export { default as PartyBanner } from './PartyBanner/PartyBanner';
+export { default as MonthBirthdays } from './MonthBirthdays/MonthBirthdays';
 
 // Footer
 export { default as Footer } from './Footer/Footer';

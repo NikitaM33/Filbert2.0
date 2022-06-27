@@ -17,6 +17,7 @@ const News = () => {
 
   useEffect(() => {
     dispatch(getLeadersInfo());
+    window.scrollTo(0, 0);
   }, []);
 
   return (

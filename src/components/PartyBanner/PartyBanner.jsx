@@ -32,17 +32,17 @@ const PartyBanner = () => {
       y: '-8%',
     },
     {
-      delay: 1,
+      delay: 0.3,
       duration: 5,
       y: '0',
       opacity: 1,
       ease: 'elastic',
-      stagger: { each: 0.5 },
+      stagger: { each: 0.3 },
     });
 
     isAnimate && gsap.to('.floating', {
       delay: 4,
-      duration: 3,
+      duration: 6,
       y: '-8%',
       opacity: 1,
       ease: 'sine.inOut',
@@ -98,7 +98,7 @@ const PartyBanner = () => {
             'floating': isAnimate
           }
         )}>
-          <img src={party1} alt="Party photo" />
+          <img src={party1} alt="Party" />
         </div>
         <div className={cn(
           'shape',
@@ -106,7 +106,7 @@ const PartyBanner = () => {
             'floating': isAnimate
           }
         )}>
-          <img src={party2} alt="Party photo" />
+          <img src={party2} alt="Party" />
         </div>
         <div className={cn(
           'shape',
@@ -114,7 +114,7 @@ const PartyBanner = () => {
             'floating': isAnimate
           }
         )}>
-          <img src={party3} alt="Party photo" />
+          <img src={party3} alt="Party" />
         </div>
         <div className={cn(
           'shape',
@@ -122,7 +122,7 @@ const PartyBanner = () => {
             'floating': isAnimate
           }
         )}>
-          <img src={party8} alt="Party photo" />
+          <img src={party8} alt="Party" />
         </div>
         <div className={cn(
           'shape',
@@ -130,7 +130,7 @@ const PartyBanner = () => {
             'floating': isAnimate
           }
         )}>
-          <img src={party4} alt="Party photo" />
+          <img src={party4} alt="Party" />
         </div>
         <div className={cn(
           'shape',
@@ -138,7 +138,7 @@ const PartyBanner = () => {
             'floating': isAnimate
           }
         )}>
-          <img src={party5} alt="Party photo" />
+          <img src={party5} alt="Party" />
         </div>
         <div className={cn(
           'shape',
@@ -146,7 +146,7 @@ const PartyBanner = () => {
             'floating': isAnimate
           }
         )}>
-          <img src={party9} alt="Party photo" />
+          <img src={party9} alt="Party" />
         </div>
         <div className={cn(
           'shape',
@@ -154,7 +154,7 @@ const PartyBanner = () => {
             'floating': isAnimate
           }
         )}>
-          <img src={party6} alt="Party photo" />
+          <img src={party6} alt="Party" />
         </div>
         <div className={cn(
           'shape',
@@ -162,7 +162,7 @@ const PartyBanner = () => {
             'floating': isAnimate
           }
         )}>
-          <img src={party7} alt="Party photo" />
+          <img src={party7} alt="Party" />
         </div>
         <div className={cn(
           'shape',
@@ -170,7 +170,7 @@ const PartyBanner = () => {
             'floating': isAnimate
           }
         )}>
-          <img src={party10} alt="Party photo" />
+          <img src={party10} alt="Party" />
         </div>
 
         {/* Info circal */}

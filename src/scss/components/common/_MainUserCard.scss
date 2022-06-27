@@ -4,9 +4,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // width: 28%;
     width: 80%;
-    margin: 0 5% 8vw 0;
+    margin: 0 2% 8vw 0;
     filter: drop-shadow($allOverShadow);
     overflow: hidden;
 
@@ -15,22 +14,30 @@
     }
 
     @media screen and (min-width: $laptop) {
-        width: 28%;
+        width: 20%;
     }
 
     &__photo {
         width: 45vw;
         height: 45vw;
         margin: 0rem 0 -3rem 0rem;
-        border-radius: 50%;
-        overflow: hidden;
+        border-radius: 50% !important;
+        overflow: hidden !important;
+        cursor: pointer;
         z-index: 1;
+
 
         & img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
+            border-radius: 50% !important;
+            transition: $mainTransition !important;
+        }
+
+        &:hover img {
+            transform: scale(1.03);
         }
 
         @media screen and (min-width: $tablet) {
@@ -39,14 +46,26 @@
         }
 
         @media screen and (min-width: $laptop) {
-            width: 16vw;
-            height: 16vw;
-        }
-
-        @media screen and (min-width: 1937px) {
             width: 12vw;
             height: 12vw;
         }
+
+        @media screen and (min-width: 1937px) {
+            width: 10vw;
+            height: 10vw;
+        }
+    }
+
+    &__switchModal {
+        position: inherit !important;
+        width: 100%;
+        height: 100% !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        border-radius: 50% !important;
+        box-shadow: none !important;
+        transition: $mainTransition !important;
     }
 
     &__descr {
@@ -60,24 +79,26 @@
     &__personInfo {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         width: 100%;
         height: 54vw;
         padding: 1rem;
         border: $whiteBorder;
         border-radius: $mainRadius;
+        overflow: hidden;
 
         @media screen and (min-width: $tablet) {
             height: 32vw;
         }
 
         @media screen and (min-width: $laptop) {
-            height: 21vw;
+            // height: 21vw;
+            height: 18vw;
         }
 
         @media screen and (min-width: $laptopL) {
-            height: 15vw;
+            height: 11vw;
         }
 
         @media screen and (min-width: 1937px) {
@@ -90,17 +111,66 @@
         font-size: $fontSub;
         font-weight: $fat;
         color: $h1;
-    }
-
-    &__position {
-        margin: 0 0 1vw 0;
-        font-size: $text;
-        font-weight: $normal;
-        color: $h1;
+        line-height: 1.5rem;
     }
 
     &__depart {
-        // height: 11vw;
-        // overflow: hidden;
+        font-weight: $medium;
     }
+
+    &__position {
+        font-size: $smallText;
+        color: $h1;
+    }
+
+    &__birthDay {
+        font-size: $text;
+        font-weight: $medium;
+        color: $h1;
+    }
+
+    &__photoContainer {
+        overflow: hidden;
+    }
+
+    &__modalInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 0 0 3rem 0;
+    }
+
+    &__modalPhoto {
+        max-width: 100%;
+        height: 32vw;
+        margin: 0 0 1.5rem 0;
+        border-radius: $mainRadius;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+.ant-modal-wrap {
+    background: $backdropBlue;
+    backdrop-filter: blur(15px);
+}
+
+.ant-modal-header {
+    padding: 23px 24px !important;
+}
+
+.ant-modal-body {
+    padding-bottom: 2rem !important;
+    border-radius: 0 0 12px 12px !important;
+}
+
+.swiper-slide {
+    width: 100% !important;
 }

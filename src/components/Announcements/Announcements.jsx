@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import { BlockHeader } from '@common';
-import logoAnnouncment from '@assets/LogoAnnouncment.png';
-import AnnouncmentsList from './AnnouncementsList';
+import { BlockHeader } from "@common";
+import logoAnnouncment from "@assets/LogoAnnouncment.png";
+import AnnouncmentsList from "./AnnouncementsList";
 
 const Announcements = () => {
+
   return (
     <div className="announcements">
       <div className="wrapper">
@@ -13,10 +14,10 @@ const Announcements = () => {
             <BlockHeader
               blue
               reverse
-              textH3={'Объявления'}
-              textH2={'Раздел для публикаций'}
-              textB={'объявлений'}
-              textP={'Здесь Вы можете разместить свое объявление'}
+              textH3={"Объявления"}
+              textH2={"Раздел для публикаций"}
+              textB={"объявлений"}
+              textP={"Здесь Вы можете разместить свое объявление"}
             />
           </div>
           <div className="announcements__logo">
@@ -27,7 +28,7 @@ const Announcements = () => {
         <AnnouncmentsList />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Announcements;

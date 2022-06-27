@@ -3,6 +3,8 @@
 @import 'libs/normalize';
 @import 'components/all';
 
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
 html,
 body {
     scrollbar-color: $mainText $h1;

@@ -6,7 +6,7 @@ export const SET_MANU_ACTIVE = 'SET_MANU_ACTIVE';
 export const SET_SUB_MENU_ACTIVE = 'SET_SUB_MENU_ACTIVE';
 
 // API
-export const INSTANCE_URL = '/INSTANCE_URL/';
+export const INSTANCE_URL = 'http://192.168.10.185:8080/api/';
 export const GET_LEADERS = 'GET_LEADERS/';
 
 // OFFICE MAP
@@ -27,3 +27,4 @@ export const SET_NEW_WORKERS = 'SET_NEW_WORKERS';
 
 // CORP LIVE PAGE
 export const SET_BIRTHDAYS = 'SET_BIRTHDAYS';
+export const SET_TODAY_BIRTHDAY = 'SET_TODAY_BIRTHDAY';

@@ -71,6 +71,10 @@
             }
         }
 
+        &__cardContainer {
+            width: 20rem !important;
+        }
+
         &__personImg {
             margin: 0 auto;
             background: $corpWhite;

@@ -1,0 +1,304 @@
+.monthBirthdays {
+    position: relative;
+    padding: $YPadding 0;
+
+   &__headerText {
+       display: flex;
+       justify-content: center;
+       margin: 0 0 5vw 0;
+
+        @media screen and (min-width: $laptop) {
+            justify-content: flex-start;
+        }
+   }
+
+   &__headerContainer {
+        max-width: 100%;
+
+        @media screen and (min-width: $tablet) {
+            max-width: 70%;
+        }
+
+        @media screen and (min-width: $laptop) {
+            max-width: 50%;
+        }
+   }
+
+   &__items {
+       display: flex;
+       justify-content: space-around;
+       flex-wrap: wrap;
+   }
+
+    &__flecks {
+        position: relative;
+
+        & div:nth-child(1),
+        & div:nth-child(2),
+        & div:nth-child(3),
+        & div:nth-child(4),
+        & div:nth-child(5),
+        & div:nth-child(6),
+        & div:nth-child(7),
+        & div:nth-child(8),
+        & div:nth-child(9),
+        & div:nth-child(10),
+        & div:nth-child(11) {
+            @include birthday;
+            position: absolute;
+        }
+
+        & div:nth-child(1) {
+            top: -4vw;
+            left: 6vw;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: $corpBlueRadial;
+            border-radius: 50%;
+            filter: blur(3px);
+            animation: birthdayScale 5s 0s infinite;
+
+            @media screen and (min-width: $tablet) {
+                top: 5vw;
+            }
+
+            @media screen and (min-width: $laptop) {
+                top: 8vw;
+                left: 50vw;
+            }
+
+            @media screen and (min-width: $laptopL) {
+                left: 2vw;
+            }
+        }
+
+        & div:nth-child(2) {
+            top: 34vw;
+            // top: 16vw;
+            left: 68vw;
+            width: 4.5rem;
+            height: 4.5rem;
+            background: $corpYellowGradient;
+            border-radius: 50%;
+            background-clip: padding-box;
+            animation: birthdayScale 5s 0.5s infinite;
+
+            @media screen and (min-width: $laptop) {
+                top: 23vw;
+                left: 85vw;
+            }
+
+            @media screen and (min-width: $laptopL) {
+                top: 18vw;
+                left: 72vw;
+            }
+
+            @media screen and (min-width: $fourK) {
+                left: 52vw;
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 4px;
+                right: 4px;
+                bottom: 4px;
+                left: 4px;
+                background: #fff;
+                border-radius: inherit;
+            }
+        }
+
+        & div:nth-child(3) {
+            top: -4vw;
+            // top: 10vw;
+            left: 71vw;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: $corpYellowGradient;
+            border-radius: 50%;
+            background-clip: padding-box;
+            animation: birthdayScale 5s 0.5s infinite;
+
+            @media screen and (min-width: $laptop) {
+                left: 80vw;
+            }
+
+            @media screen and (min-width: $tablet) {
+                top: 3vw;
+            }
+
+            @media screen and (min-width: $laptopL) {
+                left: 65vw;
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: 3px;
+                right: 3px;
+                bottom: 3px;
+                left: 3px;
+                background: #fff;
+                border-radius: inherit;
+            }
+        }
+
+        & div:nth-child(4) {
+            top: 4vw;
+            left: 76vw;
+            width: 2rem;
+            height: 2rem;
+            animation: starBlink step-end 3s 3s infinite;
+
+            @media screen and (min-width: $tablet) {
+                top: 14vw;
+                left: 85vw;
+            }
+
+            @media screen and (min-width: $laptopL) {
+                top: 7vw;
+                left: 53vw;
+            }
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        & div:nth-child(5) {
+            top: 14vw;
+            left: -6vw;
+            width: 4rem;
+            height: 4rem;
+            animation: starBlink step-end 3s 8s infinite;
+
+            @media screen and (min-width: $tablet) {
+                left: 1vw;
+            }
+
+            @media screen and (min-width: $laptop) {
+                left: 24vw;
+            }
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        & div:nth-child(6) {
+            top: 72vw;
+            left: -2vw;
+            width: 4rem;
+            height: 4rem;
+            background: $corpBlue;
+            border-radius: 50%;
+            filter: blur(3px);
+            animation: birthdayScale 3s 8s infinite;
+        }
+
+        & div:nth-child(7) {
+            top: 60vw;
+            left: 20vw;
+            width: 4rem;
+            height: 4rem;
+            background: $corpYellowGradient;
+            border-radius: 50%;
+            background-clip: padding-box;
+            animation: birthdayScale 3s 8s infinite;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 3px;
+                right: 3px;
+                bottom: 3px;
+                left: 3px;
+                background: #fff;
+                border-radius: inherit;
+            }
+        }
+
+        & div:nth-child(8) {
+            top: 72vw;
+            left: 62vw;
+            width: 2rem;
+            height: 2rem;
+            background: $corpYellowGradient;
+            border-radius: 50%;
+            background-clip: padding-box;
+            animation: birthdayScale 3s 8s infinite;
+
+            @media screen and (min-width: $fourK) {
+                left: 50vw;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 3px;
+                right: 3px;
+                bottom: 3px;
+                left: 3px;
+                background: #fff;
+                border-radius: inherit;
+            }
+        }
+
+        & div:nth-child(9) {
+            top: 58vw;
+            left: 72vw;
+            width: 5rem;
+            height: 5rem;
+            background: $corpBlue;
+            border-radius: 50%;
+            filter: blur(3px);
+            animation: birthdayScale 3s 8s infinite;
+
+            @media screen and (min-width: $fourK) {
+                left: 53vw;
+            }
+        }
+
+        & div:nth-child(10) {
+            top: 57vw;
+            left: 45vw;
+            width: 3rem;
+            height: 3rem;
+            animation: starBlink step-end 3s 8s infinite;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        & div:nth-child(11) {
+            top: 82vw;
+            left: 73vw;
+            width: 4rem;
+            height: 4rem;
+            animation: starBlink step-end 3s 8s infinite;
+
+            @media screen and (min-width: $fourK) {
+                top: 69vw;
+                left: 33vw;
+            }
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}

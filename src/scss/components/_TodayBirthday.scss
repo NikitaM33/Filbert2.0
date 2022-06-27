@@ -413,12 +413,9 @@
 
     &__depart {
         width: 20rem;
-        height: 2.5rem;
-        white-space: nowrap;
         font-size: $fontSubHead;
         font-weight: $thin;
         color: $mainText;
-        overflow: hidden;
     }
 
     &__personCorpCongrat {

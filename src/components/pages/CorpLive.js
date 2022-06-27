@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { HeaderText, YellowButton } from '@common';
-import { TodayBirthday, PartyBanner } from '../';
+import { TodayBirthday, PartyBanner, MonthBirthdays } from '../';
 import winterHeaderVideo from '@assets/headerVideo/headerVideo.mp4';
 import summerHeaderVideo from '@assets/headerVideo/SummerHeaderVideo.webm';
 import wave from '@assets/whiteWave.svg';
@@ -24,6 +24,7 @@ const CorpLive = () => {
   useEffect(() => {
     // TO DO: Сделать запрос header видео из базы, чтобы потом можно было добавлять любой видос
     // dispatchEvent(fetchVideoHeader());
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -55,6 +56,7 @@ const CorpLive = () => {
 
       <TodayBirthday />
       <PartyBanner />
+      <MonthBirthdays />
     </section>
   )
 }

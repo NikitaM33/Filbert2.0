@@ -3,15 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { BlockHeader, UserBirthdayCard } from '@common';
 import birthdayStar from '@assets/icons/LightYellowStar.svg';
-import { fetchBirthdays } from '@redux/actions/fetchBirthdays';
+// import { setTodayBirthday } from '@redux/actions/fetchBirthdays';
 
 const TodayBirthday = () => {
-  const dispatch = useDispatch();
-  const { userBirth } = useSelector(({ corpLive }) => corpLive);
+  // const dispatch = useDispatch();
+  const { todayUserBirth } = useSelector(({ corpLive }) => corpLive);
+  console.log(todayUserBirth)
 
-  useEffect(() => {
-    dispatch(fetchBirthdays());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(setTodayBirthday());
+  // }, []);
 
   return (
     <section className="todayBirthday">
@@ -66,14 +67,14 @@ const TodayBirthday = () => {
             <div></div>
           </div>
           {
-            userBirth
-              ? userBirth.map((user) => {
+            todayUserBirth
+              ? todayUserBirth.map((user) => {
                 return <UserBirthdayCard
                   key={user.id}
                   user={user}
                 />
               })
-              : 'В этом месяце ни у кого нет дней рождений :(('
+              : 'Сегодня никто не отмечает день рождения :('
           }
         </div>
       </div>
