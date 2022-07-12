@@ -126,6 +126,7 @@ export const galeryAPI = {
           'http://192.168.10.185:8080/img/Test/family/5J4A5707.jpg',
           'http://192.168.10.185:8080/img/Test/family/5J4A5749.jpg',
           'http://192.168.10.185:8080/img/Test/family/5J4A6262.jpg',
+          'http://192.168.10.185:8080/img/Test/family/5J4A5382.jpg',
         ],
         albumName: 'День семьи',
         albumYear: '2019'

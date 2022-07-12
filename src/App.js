@@ -8,6 +8,7 @@ import {
   CreateAnnouncement,
   CorpLive,
   PhotoGallery,
+  VideoGallery,
   PhotoAlbum,
   Footer
 } from './components';
@@ -25,6 +26,7 @@ function App() {
             <Route path="corpLive" element={<CorpLive />} />
             <Route path="photoGalery" element={<PhotoGallery />} />
             <Route path="album" element={<PhotoAlbum />} />
+            <Route path="videoGalery" element={<VideoGallery />} />
 
             {/* TODO: Доделать NotFound! */}
             <Route path="*" element={<NotFound />} />

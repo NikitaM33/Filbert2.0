@@ -18,7 +18,7 @@ const SubMenu = () => {
       <Divider className="divider" />
 
       <Menu.Item key="2" className="dropMenu__item">
-        <Link rel="noopener noreferrer" to="/" style={{ color: '#F2F2F2' }}>
+        <Link rel="noopener noreferrer" to="/videoGalery" style={{ color: '#F2F2F2' }}>
           Видео
         </Link>
       </Menu.Item>
@@ -26,7 +26,7 @@ const SubMenu = () => {
       <Divider className="divider" />
 
       <Menu.Item key="3" className="dropMenu__item">
-        <Link rel="noopener noreferrer" to="/" style={{ color: '#F2F2F2' }}>
+        <Link rel="noopener noreferrer" to="/chat" style={{ color: '#F2F2F2' }}>
           Чат
         </Link>
       </Menu.Item>

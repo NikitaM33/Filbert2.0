@@ -9,7 +9,39 @@
     }
     
     &__back {
+        & button {
+            width: 2rem;
+            height: 2rem;
+            background: rgb(206, 206, 206);
+            font-size: $fontSub;
+            color: $h1;
+            border: none;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+        }
+    }
 
+    &__goTop {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        padding: $YPadding 0 0 0;
+
+        & button {
+            // position: absolute;
+            // bottom: 0;
+            // right: 0;
+            width: 2rem;
+            height: 2rem;
+            background: rgb(206, 206, 206);
+            font-size: $fontSub;
+            color: $h1;
+            border: none;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+        }
     }
 
     &__header {
@@ -37,16 +69,19 @@
     }
 
     &__modalPhoto {
-        // width: 100%;
         height: 50rem;
         border-radius: $mainRadius;
         overflow: hidden;
 
-        & img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
+        .zzzoom {
+            height: 50rem;
+            
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
         }
     }
 }

@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { Modal, Button } from "antd";
 import Swiper, { Navigation } from "swiper";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import PrismaZoom from "react-prismazoom";
 
 import { fetchAlbumById } from "@redux/actions/gallery";
 
 const PhotoAlbum = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { albumById } = useSelector(({ gallery }) => gallery);
   const [visible, setVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(null);
 
   useEffect(() => {
-    const history = useHistory();
+    window.scrollTo(0, 0);
     const albumId = window.location.search.slice(4);
 
     dispatch(fetchAlbumById(albumId));
@@ -34,6 +36,7 @@ const PhotoAlbum = () => {
       initialSlide: currentSlide,
       spaceBetween: 50,
       watchOverflow: true,
+      simulateTouch: false,
       speed: 800,
     });
   }, [currentSlide]);
@@ -44,8 +47,12 @@ const PhotoAlbum = () => {
   };
 
   const handleGoBack = () => {
-    console.log(useHistory)
-  }
+    navigate(-1);
+  };
+
+  const handleGoTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   if (!albumById) {
     return "Loading...";
@@ -93,7 +100,9 @@ const PhotoAlbum = () => {
                     return (
                       <div key={photo} className="swiper-slide">
                         <div className="album__modalPhoto">
-                          <img src={photo} alt={albumById.albumName} />
+                          <PrismaZoom className="zzzoom">
+                            <img src={photo} alt={albumById.albumName} />
+                          </PrismaZoom>
                         </div>
                       </div>
                     );
@@ -104,6 +113,12 @@ const PhotoAlbum = () => {
               <div className="swiper-button-next"></div>
             </div>
           </Modal>
+        </div>
+
+        <div className="album__goTop">
+          <button onClick={handleGoTop}>
+            <FontAwesomeIcon icon={faArrowUp} />
+          </button>
         </div>
       </div>
     </div>

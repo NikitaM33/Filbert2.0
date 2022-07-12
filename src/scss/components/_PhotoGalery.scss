@@ -22,6 +22,7 @@
         grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
         grid-template-rows: auto;
         gap: 0.8vw;
+        margin-top: $YPadding;
     }
 
     &__item {

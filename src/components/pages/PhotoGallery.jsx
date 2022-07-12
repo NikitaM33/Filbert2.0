@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { HeaderText } from "@common";
 import { useSelector } from "react-redux";
 
-import march8 from "../../assets/Test/8March2021.jpg";
-import familyDay from "../../assets/Test/FamilyDay2019.jpg";
-import fort from "../../assets/Test/filbertFort.jpg";
-import NY2020 from "../../assets/Test/NY2020.jpg";
-
 const PhotoGallery = () => {
   const { albums } = useSelector(({ gallery }) => gallery);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="photoGallery">

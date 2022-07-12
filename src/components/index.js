@@ -30,6 +30,7 @@ export { default as MonthBirthdays } from './MonthBirthdays/MonthBirthdays';
 
 // Photo galery page
 export { default as PhotoGallery } from './pages/PhotoGallery';
+export { default as VideoGallery } from './pages/VideoGallery';
 export { default as PhotoAlbum } from './PhotoAlbum/PhotoAlbum';
 
 // Footer

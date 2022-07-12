@@ -39,7 +39,7 @@ const CorpLive = () => {
           </div>
           <div className="videoHeader__galleryBtn">
             <Link to="/photoGalery">
-              <div className="videoHeader__button">Галерея</div>
+              <div className="videoHeader__button">Фото галерея</div>
             </Link>
           </div>
         </div>

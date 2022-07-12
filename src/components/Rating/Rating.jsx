@@ -72,7 +72,6 @@ const Rating = ({ leaders }) => {
             <div className="rating__overallRating overallRating">
               {othersLeaders &&
                 othersLeaders.map((person, index) => {
-                  console.log('Rating', person);
                   let feesPersent = parseInt(person.fees.split(' ').join(''));
                   let feesValue = feesPersent
                     ? (feesPersent * 100) / 2000000
