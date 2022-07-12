@@ -1,0 +1,58 @@
+.album {
+    padding: $YPadding 0;
+
+    &__info {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    &__back {
+
+    }
+
+    &__header {
+        margin: 2rem auto;
+        font-size: $fontSubHead;
+        text-align: center;
+
+        & b {
+            color: $h1;
+        }
+    }
+
+    &__pictures {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+        grid-template-rows: auto;
+        gap: 0.5vw;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__modalPhoto {
+        // width: 100%;
+        height: 50rem;
+        border-radius: $mainRadius;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
+
+.ant-btn {
+    padding: 0 !important;
+    height: 17rem !important;
+    border: none !important;
+}

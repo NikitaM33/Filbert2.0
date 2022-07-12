@@ -10,6 +10,12 @@
         margin: 0 0 0 auto;
     }
 
+    &__noCountYet {
+        & h2 {
+            color: $subColor;
+        }
+    }
+
     &__info {
         display: flex;
         flex-direction: column;

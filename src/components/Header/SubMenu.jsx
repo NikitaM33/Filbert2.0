@@ -10,7 +10,7 @@ const SubMenu = () => {
   return (
     <Menu className="dropMenu" onClick={clickHandle}>
       <Menu.Item key="1" className="dropMenu__item">
-        <Link rel="noopener noreferrer" to="/">
+        <Link rel="noopener noreferrer" to="/photoGalery">
           Фото
         </Link>
       </Menu.Item>

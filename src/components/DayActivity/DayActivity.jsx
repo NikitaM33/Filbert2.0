@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-
+import { useSelector, useDispatch } from "react-redux";
 import Swiper, {
   Autoplay,
   EffectCoverflow,
@@ -9,6 +7,10 @@ import Swiper, {
   Pagination,
 } from "swiper";
 import "swiper/swiper-bundle.min.css";
+
+import { fetchBirthdays } from "@redux/actions/fetchBirthdays";
+import { DayActivityBirthdays } from '@common';
+
 
 import flag1 from "@assets/Test/flag1.svg";
 import flag2 from "@assets/Test/flag2.svg";
@@ -19,7 +21,8 @@ import flag6 from "@assets/Test/flag6.svg";
 import flag7 from "@assets/Test/flag7.svg";
 
 function DayActivity() {
-  const { userBirth } = useSelector(({ corpLive }) => corpLive);
+  const { todayUserBirth } = useSelector(({ corpLive }) => corpLive);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     Swiper.use([Autoplay, EffectCoverflow, Navigation, Pagination]);
@@ -64,6 +67,10 @@ function DayActivity() {
     });
   }, []);
 
+  useEffect(() => {
+    dispatch(fetchBirthdays());
+  }, []);
+
   return (
     <section className="dayActivity">
       <div className="wrapper">
@@ -78,33 +85,13 @@ function DayActivity() {
             {/* Slider */}
             <div className="swiper-container birthday__personCard">
               <div className="swiper-wrapper">
-                  {userBirth &&
-                    userBirth.map((person, index) => {
+                {todayUserBirth
+                  ? todayUserBirth.map((person) => {
                       return (
-                        <div className="swiper-slide birthday__cardContainer"
-                          key={person.id}
-                        >
-                          <div className="birthday__personImg">
-                            <div className="birthday__card card">
-                              <div className="card__img">
-                                <img src={person.photo} alt={person.name} />
-                              </div>
-                              <div className="card__text">
-                                <h2>{person.name}</h2>
-                                <h3>{person.depart}</h3>
-
-                                <div className="card__congratulation">
-                                  {person.corpCongrat}
-                                </div>
-                              </div>
-                              <div className="card__button">
-                                <Link to="/corpLive">Поздравить</Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        <DayActivityBirthdays key={person._id} person={person} />
                       );
-                    })}
+                    })
+                  : "Сегодня никто не отмечает ДР"}
               </div>
 
               {/* Navigation */}

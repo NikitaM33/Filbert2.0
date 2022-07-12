@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { fetchWorldNews } from '@redux/actions/fetchAllNews';
+import { fetchInnerNews, fetchWorldNews } from '@redux/actions/fetchAllNews';
 import InnerNews from './News/InnerNews';
 import WorldNews from './News/WorldNews';
 import CollectionNews from './News/CollectionNews';
@@ -34,6 +34,7 @@ const NewsPapers = () => {
   // }, []);
 
   useEffect(() => {
+    dispatch(fetchInnerNews());
     dispatch(fetchWorldNews());
   }, []);
 

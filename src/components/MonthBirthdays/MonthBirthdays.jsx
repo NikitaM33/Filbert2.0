@@ -96,17 +96,17 @@ const MonthBirthdays = () => {
                         {person.img ? (
                           <img
                             src={person.img}
-                            alt={`${person.name} ${person.secondName}`}
+                            alt={`${person.name} ${person.lastName}`}
                           />
                         ) : person.sex === "female" ? (
                           <img
                             src={plugFemale}
-                            alt={`${person.name} ${person.secondName}`}
+                            alt={`${person.name} ${person.lastName}`}
                           />
                         ) : (
                           <img
                             src={plugMale}
-                            alt={`${person.name} ${person.secondName}`}
+                            alt={`${person.name} ${person.lastName}`}
                           />
                         )}
                       </Button>
@@ -115,7 +115,7 @@ const MonthBirthdays = () => {
                     <div className="mainPersonCard__descr">
                       <div className="mainPersonCard__personInfo">
                         <div className="mainPersonCard__name">
-                          {`${person.name} ${person.secondName}`}
+                          {`${person.name} ${person.lastName}`}
                         </div>
                         <div className="mainPersonCard__position">
                           {person.position}
@@ -166,23 +166,23 @@ const MonthBirthdays = () => {
                                 {person.img ? (
                                   <img
                                     src={person.img}
-                                    alt={`${person.name} ${person.secondName}`}
+                                    alt={`${person.name} ${person.lastName}`}
                                   />
                                 ) : person.sex === "female" ? (
                                   <img
                                     src={plugFemale}
-                                    alt={`${person.name} ${person.secondName}`}
+                                    alt={`${person.name} ${person.lastName}`}
                                   />
                                 ) : (
                                   <img
                                     src={plugMale}
-                                    alt={`${person.name} ${person.secondName}`}
+                                    alt={`${person.name} ${person.lastName}`}
                                   />
                                 )}
                               </div>
 
                               <div className="mainPersonCard__name">
-                                {`${person.name} ${person.secondName}`}
+                                {`${person.name} ${person.lastName}`}
                               </div>
                               <div className="mainPersonCard__position">
                                 {person.position}

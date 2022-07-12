@@ -23,15 +23,13 @@ export const counterAPI = {
 // Лидеры по сборам
 export const topCollectorsAPI = {
   getLeadersInfo() {
-    console.log('TOP Collectors');
-
-    // return axios.get('https://rssexport.rbc.ru/rbcnews/news/30/full.rss').catch((error) => error);
+    return instance.get('leaders').catch(err => `Fetch GET request to LEADERINFO is faild! ${err}`);
   }
 }
 
 // Новости
 export const newsAPI = {
-  fetchWorldNews() {
+  getWorldNews() {
     return 'In progress...'
 
     // var url = 'https://newsapi.org/v2/top-headlines?' +
@@ -45,9 +43,11 @@ export const newsAPI = {
     //     return response.json();
     //   })
   },
+  getInnerNews() {
+    return instance.get('news').catch(err => `Fetch GET request to INNERNEWS is faild! ${err}`)
+  },
   getNewsById(newsId) {
-    console.log('Fetch news');
-    return newsId;
+    return instance.get(`news/${newsId}`).catch(err =>  `Fetch GET request to NEWSBYID is faild! ${err}`);
   }
 }
 
@@ -76,5 +76,66 @@ export const newUsersApi = {
 export const birthdaysAPI = {
   getBirthdays() {
     return instance.get('greetingPhoto').catch(err => `Fetch birthdays is failed. ${err}`)
+  }
+}
+
+export const galeryAPI = {
+  getAlbumById(id) {
+    const albums = [
+      {
+        id: '123def',
+        photos: [
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A1407.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A1512.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2277.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2300.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2435.jpg',
+        ],
+        albumName: '8 марта',
+        albumYear: '2021'
+      },
+      {
+        id: '234def',
+        photos: [
+          'http://192.168.10.185:8080/img/Test/fortFilbertAlbum/SLAV3602.jpg',
+          'http://192.168.10.185:8080/img/Test/fortFilbertAlbum/SLAV3705.jpg',
+          'http://192.168.10.185:8080/img/Test/fortFilbertAlbum/SLAV3820.jpg',
+          'http://192.168.10.185:8080/img/Test/fortFilbertAlbum/SLAV3849.jpg',
+          'http://192.168.10.185:8080/img/Test/fortFilbertAlbum/SLAV3991.jpg',
+        ],
+        albumName: 'Форт Филберт',
+        albumYear: '2019'
+      },
+      {
+        id: '345def',
+        photos: [
+          'http://192.168.10.185:8080/img/Test/NY/5J4A2773.jpg',
+          'http://192.168.10.185:8080/img/Test/NY/5J4A3037.jpg',
+          'http://192.168.10.185:8080/img/Test/NY/5J4A3453.jpg',
+          'http://192.168.10.185:8080/img/Test/NY/5J4A4021.jpg',
+          'http://192.168.10.185:8080/img/Test/NY/5J4A4221.jpg',
+        ],
+        albumName: 'Новогодний корпоратив',
+        albumYear: '2020'
+      },
+      {
+        id: '456def',
+        photos: [
+          'http://192.168.10.185:8080/img/Test/family/5J4A5178.jpg',
+          'http://192.168.10.185:8080/img/Test/family/5J4A5335.jpg',
+          'http://192.168.10.185:8080/img/Test/family/5J4A5707.jpg',
+          'http://192.168.10.185:8080/img/Test/family/5J4A5749.jpg',
+          'http://192.168.10.185:8080/img/Test/family/5J4A6262.jpg',
+        ],
+        albumName: 'День семьи',
+        albumYear: '2019'
+      },
+    ];
+
+    const findAlbum = (id) => {
+      return albums.find(item => item.id == id);
+    }
+
+    return findAlbum(id);
   }
 }

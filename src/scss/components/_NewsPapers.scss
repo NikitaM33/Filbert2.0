@@ -12,6 +12,9 @@
 
     &__items {
         display: flex;
+        justify-content: center;
+        height: 30rem;
+        overflow: hidden;
     }
 
     &__worldNews,

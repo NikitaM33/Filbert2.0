@@ -23,7 +23,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: top;
         }
 
         @media screen and (min-width: $mobileL) {
@@ -36,6 +36,10 @@
     }
 
     &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
         padding: 0.5rem 1rem;
 
         @media screen and (min-width: $tablet) {
@@ -54,7 +58,14 @@
 
     &__textItem {
         max-height: 11em;
-        overflow: hidden;
+
+        & p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 10;
+            overflow: hidden;
+        }
 
         @media screen and (min-width: $mobileL) {
             max-height: 7.4em;
@@ -65,7 +76,7 @@
         }
 
         @media screen and (min-width: $laptop) {
-            max-height: 24em;
+            height: 20rem;
         }
     }
 

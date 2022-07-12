@@ -7,6 +7,8 @@ import {
   News,
   CreateAnnouncement,
   CorpLive,
+  PhotoGallery,
+  PhotoAlbum,
   Footer
 } from './components';
 import { NotFound } from './components/common';
@@ -21,6 +23,8 @@ function App() {
             {/* <Route path="auth" element={<Auth />} /> */}
             <Route path="createAnnouncement" exact element={<CreateAnnouncement/>} />
             <Route path="corpLive" element={<CorpLive />} />
+            <Route path="photoGalery" element={<PhotoGallery />} />
+            <Route path="album" element={<PhotoAlbum />} />
 
             {/* TODO: Доделать NotFound! */}
             <Route path="*" element={<NotFound />} />

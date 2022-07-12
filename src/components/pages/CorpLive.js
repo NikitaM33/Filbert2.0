@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-import { HeaderText, YellowButton } from '@common';
-import { TodayBirthday, PartyBanner, MonthBirthdays } from '../';
-import winterHeaderVideo from '@assets/headerVideo/headerVideo.mp4';
-import summerHeaderVideo from '@assets/headerVideo/SummerHeaderVideo.webm';
-import wave from '@assets/whiteWave.svg';
+import { HeaderText } from "@common";
+import { TodayBirthday, PartyBanner, MonthBirthdays } from "../";
+import winterHeaderVideo from "@assets/headerVideo/headerVideo.mp4";
+import summerHeaderVideo from "@assets/headerVideo/SummerHeaderVideo.webm";
+import wave from "@assets/whiteWave.svg";
 
 const CorpLive = () => {
   const changeHeaderVideo = () => {
@@ -15,11 +16,7 @@ const CorpLive = () => {
     } else {
       return winterHeaderVideo;
     }
-  }
-
-  const goGalery = (e) => {
-    console.log('Going in gallery!')
-  }
+  };
 
   useEffect(() => {
     // TO DO: Сделать запрос header видео из базы, чтобы потом можно было добавлять любой видос
@@ -30,18 +27,20 @@ const CorpLive = () => {
   return (
     <section className="corpLive">
       <div className="corpLive__header videoHeader">
-        <div className='videoHeader__text'>
-          <div className='videoHeader__textContainer'>
+        <div className="videoHeader__text">
+          <div className="videoHeader__textContainer">
             <HeaderText
-              h2Header={'Внутренняя жизнь'}
-              h1Header={'Filbert'}
-              pHeader={'Какие мероприятия готовятся в нашей компании, а так же фото и видео с прошедших корпоративов, конкурсы и поздравления.'}
+              h2Header={"Внутренняя жизнь"}
+              h1Header={"Filbert"}
+              pHeader={
+                "Какие мероприятия готовятся в нашей компании, а так же фото и видео с прошедших корпоративов, конкурсы и поздравления."
+              }
             />
           </div>
           <div className="videoHeader__galleryBtn">
-            <YellowButton
-              onPush={goGalery}
-            >Галерея</YellowButton>
+            <Link to="/photoGalery">
+              <div className="videoHeader__button">Галерея</div>
+            </Link>
           </div>
         </div>
         <div className="videoHeader__video">
@@ -58,7 +57,7 @@ const CorpLive = () => {
       <PartyBanner />
       <MonthBirthdays />
     </section>
-  )
-}
+  );
+};
 
 export default CorpLive;

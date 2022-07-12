@@ -7,11 +7,12 @@
 
     &__newsBox {
         position: relative;
+        width: 69vw;
     }
 
     &__pagination {
         display: flex;
-        padding: 0 0 0 0;
+        padding: 0;
     }
 
     &__next,
@@ -106,4 +107,12 @@
     justify-content: center;
     align-items: center;
     padding: $YPadding 0;
+}
+
+.swiper-pagintaion {
+    margin: 0 auto;
+}
+
+.swiper-pagination-bullet-active {
+    background: $h1 !important;
 }

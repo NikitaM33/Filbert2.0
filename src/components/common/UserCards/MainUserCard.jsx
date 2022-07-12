@@ -35,7 +35,7 @@ const MainUserCard = ({ newWorkers, day, month }) => {
       {newWorkers &&
         newWorkers.map((person, index) => {
           return (
-            <div key={person.id} className="mainPersonCard">
+            <div key={person._id} className="mainPersonCard">
               <div className="mainPersonCard__photo">
                 <Button
                   onClick={() => toggleModal(index)}
@@ -79,7 +79,7 @@ const MainUserCard = ({ newWorkers, day, month }) => {
           <div className="swiper-wrapper">
             {newWorkers.map((person) => {
               return (
-                <div key={person.id} className="swiper-slide">
+                <div key={person._id} className="swiper-slide">
                   <div className="mainPersonCard__modalInfo">
                     <div className="mainPersonCard__modalPhoto">
                       <img src={person.imgBig} alt={`${person.firstName} ${person.lastName}`} />

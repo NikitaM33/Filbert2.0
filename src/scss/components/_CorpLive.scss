@@ -41,6 +41,29 @@
         cursor: pointer;
     }
 
+    &__button {
+        padding: 1rem 2rem;
+        background: $corpYellowGradient;
+        font-size: $text;
+        text-align: center;
+        color: $corpWhite;
+        text-shadow: $textShadow;
+        border-radius: 3rem;
+        box-shadow: $shadow;
+        transition: $mainTransition;
+        user-select: none;
+
+        &:hover {
+            box-shadow: $hoverButtonShadow;
+            transform: translateY(-3px);
+        }
+
+        &:active {
+            box-shadow: $activeButtonShadow;
+            transform: translateY(-1px);
+        }
+    }
+
     &__video {
         width: 100%;
 

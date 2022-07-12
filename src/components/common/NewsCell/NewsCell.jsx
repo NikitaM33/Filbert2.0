@@ -14,17 +14,17 @@ const NewsCell = ({
   newsHeader,
   newsTitle
 }) => {
-  let articleLength = null;
+  // let articleLength = null;
 
-  if (column) {
-    articleLength = newsTitle > 250 ?
-      `${newsTitle.slice(0, 250)}...`
-      : newsTitle;
-  } else {
-    articleLength = newsTitle && newsTitle > 700 ?
-      newsTitle.slice(0, 700)
-      : newsTitle;
-  }
+  // if (column) {
+  //   articleLength = newsTitle > 250 ?
+  //     `${newsTitle.slice(0, 250)}...`
+  //     : newsTitle;
+  // } else {
+  //   articleLength = newsTitle && newsTitle > 700 ?
+  //     newsTitle.slice(0, 700)
+  //     : newsTitle;
+  // }
 
   return (
     <div className={cn(
@@ -55,7 +55,7 @@ const NewsCell = ({
           }
         )}>
           <h3>{newsHeader}</h3>
-          <p>{articleLength}</p>
+          <p>{newsTitle}</p>
         </div>
 
         <div className={cn(
@@ -64,8 +64,8 @@ const NewsCell = ({
             'column__textReadMore': column
           }
         )}>
+          {/* Button */}
           {
-            newsTitle &&
             <NewsPopup
               innerNews={innerNews}
               worldNews={worldNews}

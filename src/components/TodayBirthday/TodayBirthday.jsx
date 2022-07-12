@@ -8,7 +8,6 @@ import birthdayStar from '@assets/icons/LightYellowStar.svg';
 const TodayBirthday = () => {
   // const dispatch = useDispatch();
   const { todayUserBirth } = useSelector(({ corpLive }) => corpLive);
-  console.log(todayUserBirth)
 
   // useEffect(() => {
   //   dispatch(setTodayBirthday());
@@ -70,7 +69,7 @@ const TodayBirthday = () => {
             todayUserBirth
               ? todayUserBirth.map((user) => {
                 return <UserBirthdayCard
-                  key={user.id}
+                  key={user._id}
                   user={user}
                 />
               })

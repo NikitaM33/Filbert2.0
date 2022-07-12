@@ -28,5 +28,9 @@ export { default as TodayBirthday } from './TodayBirthday/TodayBirthday';
 export { default as PartyBanner } from './PartyBanner/PartyBanner';
 export { default as MonthBirthdays } from './MonthBirthdays/MonthBirthdays';
 
+// Photo galery page
+export { default as PhotoGallery } from './pages/PhotoGallery';
+export { default as PhotoAlbum } from './PhotoAlbum/PhotoAlbum';
+
 // Footer
 export { default as Footer } from './Footer/Footer';

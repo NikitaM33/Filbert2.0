@@ -48,11 +48,11 @@ const UserBirthdayCard = ({ user }) => {
     <div key={user.id} className="personEvent__card">
       <div className="personEvent__cardHeader">
         {user.img ? (
-          <img src={user.img} alt={`${user.name} ${user.secondName}`} />
+          <img src={user.img} alt={`${user.name} ${user.lastName}`} />
         ) : user.sex === "female" ? (
-          <img src={plugFemale} alt={`${user.name} ${user.secondName}`} />
+          <img src={plugFemale} alt={`${user.name} ${user.lastName}`} />
         ) : (
-          <img src={plugMale} alt={`${user.name} ${user.secondName}`} />
+          <img src={plugMale} alt={`${user.name} ${user.lastName}`} />
         )}
       </div>
       <div className="personEvent__cardBody">
