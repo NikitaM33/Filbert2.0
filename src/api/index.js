@@ -80,6 +80,37 @@ export const birthdaysAPI = {
 }
 
 export const galeryAPI = {
+  getVideoAlbums() {
+    const videos = [
+      {
+        id: 'vid123',
+        ulbumCover: 'http://192.168.10.185:8080/img/Test/8March2021.jpg',
+        albumName: '8 марта 20218 марта',
+        albumYear: '2021'
+      },
+      {
+        id: '234def',
+        ulbumCover: 'http://192.168.10.185:8080/img/Test/filbertFort.jpg',
+        albumName: 'Форт Филберт',
+        albumYear: '2019'
+      },
+      {
+        id: '345def',
+        ulbumCover: 'http://192.168.10.185:8080/img/Test/NY2020.jpg',
+        albumName: 'Новогодний корпоратив',
+        albumYear: '2020'
+      },
+      {
+        id: '456def',
+        ulbumCover: 'http://192.168.10.185:8080/img/Test/FamilyDay2019.jpg',
+        albumName: 'День семьи',
+        albumYear: '2019'
+      },
+    ];
+
+    return videos;
+  },
+
   getAlbumById(id) {
     const albums = [
       {

@@ -11,3 +11,4 @@ export { default as NotFound } from './NotFound/NotFound';
 export { default as MainUserCard } from './UserCards/MainUserCard';
 export { default as UserBirthdayCard } from './UserBirthdayCard/UserBirthdayCard';
 export { default as DayActivityBirthdays } from './DayActivityBirthdays/DayActivityBirthdays';
+export { default as Gallery } from './Gallery/Gallery';
