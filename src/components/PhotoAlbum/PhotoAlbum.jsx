@@ -55,7 +55,13 @@ const PhotoAlbum = () => {
   };
 
   if (!albumById) {
-    return "Loading...";
+    return <div style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      padding: "2rem 0",
+      color: "#08415C"
+    }}><h3>Loading...</h3></div>;
   }
 
   return (

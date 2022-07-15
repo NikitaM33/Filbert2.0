@@ -37,6 +37,10 @@
 @import 'PhotoGalery';
 @import 'photoAlbum';
 
+// Video gallery
+@import 'VideoGallery';
+@import 'VideoAlbum';
+
 // Footer
 @import 'Footer';
 
@@ -51,4 +55,5 @@
 @import 'common/NewsPopup';
 @import 'common/Registration';
 @import 'common/MainUserCard';
+@import 'common/Gallery';
 @import 'common/NotFound';

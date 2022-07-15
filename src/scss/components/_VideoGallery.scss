@@ -1,0 +1,10 @@
+.videogallery {
+    &__header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: $YPadding 0 0 0;
+    }
+}

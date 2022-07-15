@@ -31,4 +31,8 @@ export const SET_BIRTHDAYS = 'SET_BIRTHDAYS';
 export const SET_TODAY_BIRTHDAY = 'SET_TODAY_BIRTHDAY';
 
 // GALERY PAGE
+export const PHOTO_GALLERY = 'album';
+export const VIDEO_GALLERY = 'videoAlbum';
+export const SET_VIDEOS = 'SET_VIDEOS';
 export const SET_ALBUM = 'SET_ALBUM';
+export const SET_VIDEO_ALBUM = 'SET_VIDEO_ALBUM';

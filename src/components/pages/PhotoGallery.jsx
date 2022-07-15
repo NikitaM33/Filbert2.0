@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+import { PHOTO_GALLERY } from '@redux/constants';
 import { HeaderText, Gallery } from "@common";
 
 const PhotoGallery = () => {
@@ -29,7 +30,11 @@ const PhotoGallery = () => {
             {albums &&
               albums.map((album) => {
                 return (
-                  <Gallery album={album} />
+                  <Gallery
+                    key={album.id}
+                    galleryAddres={PHOTO_GALLERY}
+                    album={album}
+                  />
                 );
               })}
           </ul>

@@ -1,6 +1,7 @@
-import { SET_ALBUM } from '../constants';
+import { SET_VIDEOS, SET_ALBUM, SET_VIDEO_ALBUM } from '../constants';
 
 const initialState = {
+  videos: [],
   albums: [
     {
       id: '123def',
@@ -27,15 +28,28 @@ const initialState = {
       albumYear: '2019'
     },
   ],
-  albumById: []
+  albumById: [],
+  videoAlbumById: []
 }
 
 const gallery = (state = initialState, action) => {
   switch(action.type) {
+    case SET_VIDEOS:
+      return {
+        ...state,
+        videos: action.payload
+      }
+
     case SET_ALBUM:
       return {
         ...state,
         albumById: action.payload
+      }
+
+    case SET_VIDEO_ALBUM:
+      return {
+        ...state,
+        videoAlbumById: action.payload
       }
 
     default:

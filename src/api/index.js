@@ -83,25 +83,25 @@ export const galeryAPI = {
   getVideoAlbums() {
     const videos = [
       {
-        id: 'vid123',
-        ulbumCover: 'http://192.168.10.185:8080/img/Test/8March2021.jpg',
+        id: 'vid123def',
+        ulbumCover: 'http://192.168.10.185:8080/img/Test/videos/8march/cover.jpg',
         albumName: '8 марта 20218 марта',
         albumYear: '2021'
       },
       {
-        id: '234def',
+        id: 'vid234def',
         ulbumCover: 'http://192.168.10.185:8080/img/Test/filbertFort.jpg',
         albumName: 'Форт Филберт',
         albumYear: '2019'
       },
       {
-        id: '345def',
+        id: 'vid345def',
         ulbumCover: 'http://192.168.10.185:8080/img/Test/NY2020.jpg',
         albumName: 'Новогодний корпоратив',
         albumYear: '2020'
       },
       {
-        id: '456def',
+        id: 'vid456def',
         ulbumCover: 'http://192.168.10.185:8080/img/Test/FamilyDay2019.jpg',
         albumName: 'День семьи',
         albumYear: '2019'
@@ -110,7 +110,6 @@ export const galeryAPI = {
 
     return videos;
   },
-
   getAlbumById(id) {
     const albums = [
       {
@@ -169,5 +168,78 @@ export const galeryAPI = {
     }
 
     return findAlbum(id);
+  },
+  getVideoAlbumById(id) {
+    const videoAlbum = [
+      {
+        id: 'vid123def',
+        videos: [
+          {
+            id: 'vid123vef',
+            cover: 'http://192.168.10.185:8080/img/Test/videos/8march/cover.jpg',
+            movie: 'http://192.168.10.185:8080/img/Test/videos/8march/Филберт 5 марта 2022_full.mp4'
+          },
+          {
+            id: 'vid234vef',
+            cover: 'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A1512.jpg',
+            movie: 'http://192.168.10.185:8080/img/Test/videos/8march/DSC_0101.MOV'
+          },
+          {
+            id: 'vid345vef',
+            cover: 'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2277.jpg',
+            movie: 'http://192.168.10.185:8080/img/Test/videos/8march/DSC_0102.MOV'
+          },
+          {
+            id: 'vid456vef',
+            cover: 'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2300.jpg',
+            movie: 'http://192.168.10.185:8080/img/Test/videos/8march/Филберт 5 марта 2022_full.mp4'
+          },
+          {
+            id: 'vid567vef',
+            cover: 'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2435.jpg',
+            movie: 'http://192.168.10.185:8080/img/Test/videos/8march/Филберт 5 марта 2022_full.mp4'
+          }
+        ],
+        albumName: '8 марта',
+        albumYear: '2021'
+      },
+      {
+        id: 'vid234def',
+        videos: [
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A1407.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A1512.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2277.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2300.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2435.jpg',
+        ],
+        albumName: 'Форт Филберт',
+        albumYear: '2019'
+      },
+      {
+        id: 'vid345def',
+        videos: [
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A1407.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A1512.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2277.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2300.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2435.jpg',
+        ],
+        albumName: 'Новогодний корпоратив',
+        albumYear: '2020'
+      },
+      {
+        id: 'vid456def',
+        videos: [
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A1407.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A1512.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2277.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2300.jpg',
+          'http://192.168.10.185:8080/img/Test/8marchAlbum/5J4A2435.jpg',
+        ],
+        albumName: 'День семьи',
+        albumYear: '2019'
+      },
+    ];
+    return videoAlbum.find((item) => item.id === id);
   }
 }

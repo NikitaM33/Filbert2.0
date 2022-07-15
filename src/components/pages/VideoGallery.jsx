@@ -1,32 +1,46 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
+import { VIDEO_GALLERY } from '@redux/constants';
 import { HeaderText, Gallery } from "@common";
+import { fetchVideoAlbums } from '@redux/actions/gallery';
 
 const VideoGallery = () => {
+  const dispatch = useDispatch();
+
+  const { videos } = useSelector(({ gallery }) => gallery);
+
+  useEffect(() => {
+    dispatch(fetchVideoAlbums());
+  }, []);
+
   return (
     <div className="videogallery">
       <div className="wrapper">
         <div className="videogallery__header">
           <HeaderText
-            h2Header={"Фото галерея"}
-            h1Header={"Праздники, поздравления и не только"}
+            h2Header={"Видео галерея"}
+            h1Header={"Корпоративные события запечетленные на видео"}
             pHeader={
-              "События нашей компнии, которые мы запечетлели в фото формате, Вы можете посмотреть на этой странице"
+              "События нашей компнии, которые мы запечетлели в видео формате"
             }
           />
         </div>
 
-        {/* <div className="videogallery__albums albums">
+        <div className="videogallery__albums albums">
           <ul className="albums__list">
-            {albums &&
-              albums.map((album) => {
+            {videos &&
+              videos.map((video) => {
                 return (
-                  <Gallery album={album} />
+                  <Gallery
+                    key={video.id}
+                    galleryAddres={VIDEO_GALLERY}
+                    album={video}
+                  />
                 );
               })}
           </ul>
-        </div> */}
+        </div>
       </div>
     </div>
   );

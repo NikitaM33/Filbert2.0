@@ -10,6 +10,7 @@ import {
   PhotoGallery,
   VideoGallery,
   PhotoAlbum,
+  VideoAlbum,
   Footer
 } from './components';
 import { NotFound } from './components/common';
@@ -25,8 +26,9 @@ function App() {
             <Route path="createAnnouncement" exact element={<CreateAnnouncement/>} />
             <Route path="corpLive" element={<CorpLive />} />
             <Route path="photoGalery" element={<PhotoGallery />} />
-            <Route path="album" element={<PhotoAlbum />} />
             <Route path="videoGalery" element={<VideoGallery />} />
+            <Route path="album" element={<PhotoAlbum />} />
+            <Route path="videoAlbum" element={<VideoAlbum />} />
 
             {/* TODO: Доделать NotFound! */}
             <Route path="*" element={<NotFound />} />
